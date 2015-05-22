@@ -1,0 +1,100 @@
+.numeracao {
+    display: inline-block;
+    padding-left: 4px;
+    padding-right: 4px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    background: #0099A8;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 30px;
+}
+.numeracao-p {
+    width: 70%;
+    display: inline-block;
+    font-size: 12px !important;
+    text-align: right;
+    margin-top: 4px !important;
+    float: right;
+}
+.registro-cleanance-wall {
+    background: #FFF;
+    padding: 12px;
+    margin-bottom: 14px;
+    box-shadow: 0px 0px 4px #CCC;
+    -webkit-transition: none;
+    transition: none;
+}
+.registro-cleanance-wall p {
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+}
+.registro-cleanance-wall p.etc {
+    font-size: 12px;
+    margin-top: 8px !important;
+    display: inline-block;
+}
+.registro-cleanance-wall a {
+    color: #333;
+    -webkit-transition: none;
+    transition: none;
+}
+.registro-cleanance-wall:hover {
+    background: #0099A8;
+    color: #FFF !important;
+}
+.registro-cleanance-wall:hover a {
+    color: #FFF !important;
+}
+.registro-cleanance-wall:hover i {
+    color: #FFF !important;
+}
+.informacoes-usuario {
+    margin-top: 140px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #CCC;
+}
+.informacoes-usuario .img-perfil {
+}
+.informacoes-usuario .usuario {
+    float: left;
+    display: inline;
+    width: 100%;
+    font-size: 20px;
+    margin-left: 12px !important;
+    margin-top: 18px;
+    text-transform: uppercase;
+}
+.curtidas {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.curtidas i.fa {
+    font-size: 60px;
+    text-align: center;
+    color: #0099A8;
+}
+.curtidas h2 {
+    text-transform: uppercase;
+    font-family: 'CenturyGothic';
+    font-size: 22px;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+}
+.curtidas p {
+    margin-top: 10px;
+    display: inline-block;
+}
+.btn-ver-todos {
+    color: #666;
+    font-family: 'CenturyGothic';
+    font-size: 16px;
+    padding: 3px;
+    text-decoration: underline;
+}
+.btn-ver-todos:hover {
+background: #666;
+color: #FFF;
+}

@@ -1,0 +1,36 @@
+footer {
+    float: left;
+    display: inline;
+    clear: both;
+    width: 100%;
+    clear: both;
+    background: #0099A8;
+    height: 40px;
+    z-index: 100;
+    position: relative;
+}
+footer a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 40px;
+    color: #FFF;
+}
+footer a:hover {
+    color: #FFF !important;
+    border-bottom: 1px dotted #FFF;
+    text-decoration: none !important;
+}
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -40px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+footer {
+  height: 40px;
+}

@@ -1,0 +1,242 @@
+.navbar-clenance {
+    border: none !important;
+    background: #FFF !important;
+    margin-bottom: 0px;
+    position: relative;
+    z-index: 2;
+    height: 70px;
+    padding-top: 10px;
+}
+.col-bem-vindo {
+    background: #F6F7F7;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    box-shadow: 0 0 19px rgba(113, 113, 113, 0.5);
+    position: relative;
+    z-index: 1;
+    min-height: 90vh;
+    max-height: auto;
+}
+.col-bem-vindo p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'CenturyGothic';
+    font-size: 18px;
+    position: relative;
+    z-index: 2;
+}
+.navbar-brand {
+    padding: 0px;
+}
+.bola-icone {
+    padding: 9px;
+    border-radius: 100%;
+    border: 2px solid #0099A8;
+    font-size: 11px;
+    text-align: center;
+    height: 180px;
+    margin-bottom: 20px;
+    font-family: 'CenturyGothic';
+}
+.bola-icone img {
+    height: 60px;
+}
+.navbar-brand img {
+    height: 42px;
+    margin-top: 4px;
+    margin-left: 12px;
+}
+.navbar-clenance .active a {
+    background: transparent !important;
+    color: #777 !important;
+    padding-bottom: 23px;
+}
+.navbar-nav li {
+    margin-left: 18px;
+    margin-right: 18px;
+}
+.navbar-clenance a {
+    text-transform: uppercase;
+    font-family: 'CenturyGothic';
+    font-size: 20px;
+    padding-bottom: 23px !important;
+}
+.bola-icone-1 .p-icone {
+    margin-top: 10px;
+    margin-bottom: 24px;
+    font-family: 'CenturyGothic';
+    font-size: 13px;
+}
+.btn-participe {
+    margin-top: 30px;
+    text-transform: uppercase;
+    border: none !important;
+    background: #0099A8;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 60px;
+}
+.btn-participe:hover {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.bola-icone-2 .p-icone {
+    margin-top: 0px;
+    margin-bottom: 24px;
+    font-family: 'CenturyGothic';
+    font-size: 13px;
+}
+.btn-rede {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+.img-produtos-home {
+    margin-top: 40px;
+}
+.img-eu-amo-clenance {
+}
+.titulo-marca {
+    font-size: 64px;
+    color: #0099A8;
+    font-family: 'OptimaLTStd';
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+h2.subtitulo-marca {
+    font-size: 18px;
+    color: #0099A8;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
+h3.subtitulo-marca {
+    font-size: 20px;
+    color: #8D8C8C;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+.coracoes-1 {
+    background: url("../img/coracoes_1.png") no-repeat;
+    width: 62px;
+    height: 79px;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    -webkit-animation-duration: 2s !important;
+    -webkit-animation-iteration-count: infinite;
+}
+.coracoes-2 {
+    background: url("../img/coracoes_2.png") no-repeat;
+    width: 79px;
+    height: 79px;
+    position: absolute;
+    left: 60px;
+    top: 160px;
+    -webkit-animation-duration: 2s !important;
+    -webkit-animation-iteration-count: infinite;
+}
+.coracoes-3 {
+    background: url("../img/coracao_grande.png") no-repeat;
+    width: 218px;
+    height: 183px;
+    position: absolute;
+    left: 80px;
+    top: 50px;
+    text-align: center;
+    -webkit-animation-duration: 2s !important;
+}
+.coracoes-3 p {
+    font-family: 'CenturyGothic';
+    margin-top: 60px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #0099A8;
+}
+.coracoes-3 p strong {
+    font-size: 18px;
+}
+.coracoes-4 {
+    background: url("../img/coracoes_4.png") no-repeat;
+    width: 79px;
+    height: 79px;
+    position: absolute;
+    left: 350px;
+    top: 210px;
+    -webkit-animation-duration: 2s !important;
+    -webkit-animation-iteration-count: infinite;
+}
+.coracoes-5 {
+    background: url("../img/coracoes_3.png") no-repeat;
+    width: 79px;
+    height: 79px;
+    position: absolute;
+    right: -270px;
+    top: 160px;
+    -webkit-animation-duration: 2s !important;
+    -webkit-animation-iteration-count: infinite;
+}
+.grupo-coracoes {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 50px;
+    left: 0px;
+}
+.grupo-coracoes2 {
+    left: 50px;
+    top: 170px;
+    width: 130px;
+    height: 130px;
+}
+.grupo-coracoes3 {
+    left: 322px;
+    top: 170px;
+    width: 130px;
+    height: 130px;
+}
+.grupo-coracoes4 {
+    left: 590px;
+    top: 135px;
+    width: 130px;
+    height: 130px;
+}
+.grupo-coracoes .coracao-1 {
+    position: absolute;
+    left: 4px;
+    top: 25px;
+    width: 17px;
+    height: 16px;
+    background: url("../img/animacao-1.png") no-repeat;
+}
+.grupo-coracoes .coracao-2 {
+    position: absolute;
+    left: 22px;
+    top: 10px;
+    width: 32px;
+    height: 29px;
+    background: url("../img/animacao-2.png") no-repeat;
+}
+.grupo-coracoes .coracao-3 {
+    position: absolute;
+    left: 6px;
+    top: 42px;
+    width: 46px;
+    height: 42px;
+    background: url("../img/animacao-3.png") no-repeat;
+}
