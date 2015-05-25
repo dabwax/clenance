@@ -1,0 +1,123 @@
+/* Font-face */
+@font-face {
+    font-family: 'OptimaLTStd';
+    src: url('../font/OptimaLTStd.eot');
+    src: url('../font/OptimaLTStd.eot') format('embedded-opentype'),
+         url('../font/OptimaLTStd.woff2') format('woff2'),
+         url('../font/OptimaLTStd.woff') format('woff'),
+         url('../font/OptimaLTStd.ttf') format('truetype'),
+         url('../font/OptimaLTStd.svg#OptimaLTStd') format('svg');
+}
+@font-face {
+    font-family: 'CenturyGothic';
+    src: url('../font/CenturyGothic.eot');
+    src: url('../font/CenturyGothic.eot?#iefix') format('embedded-opentype'),
+        url('../font/CenturyGothic.woff') format('woff'),
+        url('../font/CenturyGothic.ttf')  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Regras gerais */
+* {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition:    all 0.2s ease;
+  -ms-transition:     all 0.2s ease;
+  -o-transition:      all 0.2s ease;
+}
+html, body{
+  height:100%;
+}
+body {
+    background: url("../img/fundo_agua_2.png") top center repeat-x;
+}
+
+/* Regras básicas */
+.pos-r {
+    position: relative;
+}
+.pulse2 {
+    -webkit-animation: pulse2 1s linear infinite;
+    -moz-animation: pulse2 1s linear infinite;
+    -ms-animation: pulse2 1s linear infinite;
+    animation: pulse2 1s linear infinite;
+}
+.lavalamp-object {
+    border-bottom: 3px solid #0099A8 !important;
+    -webkit-transition: none;
+    transition: none;
+}
+
+/* Keyframes */
+@keyframes "pulse2" {
+ 0% {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+ }
+ 50% {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+ }
+ 100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+ }
+
+}
+
+@-moz-keyframes pulse2 {
+ 0% {
+   -moz-transform: scale(1.1);
+   transform: scale(1.1);
+ }
+ 50% {
+   -moz-transform: scale(0.8);
+   transform: scale(0.8);
+ }
+ 100% {
+   -moz-transform: scale(1);
+   transform: scale(1);
+ }
+
+}
+
+@-webkit-keyframes "pulse2" {
+ 0% {
+   -webkit-transform: scale(1.1);
+   transform: scale(1.1);
+ }
+ 50% {
+   -webkit-transform: scale(0.8);
+   transform: scale(0.8);
+ }
+ 100% {
+   -webkit-transform: scale(1);
+   transform: scale(1);
+ }
+
+}
+
+@-ms-keyframes "pulse2" {
+ 0% {
+   -ms-transform: scale(1.1);
+   transform: scale(1.1);
+ }
+ 50% {
+   -ms-transform: scale(0.8);
+   transform: scale(0.8);
+ }
+ 100% {
+   -ms-transform: scale(1);
+   transform: scale(1);
+ }
+
+}
