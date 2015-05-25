@@ -1,59 +1,107 @@
-<?php
-/**
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @since         0.10.0
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
-
-$cakeDescription = 'CakePHP: the rapid development php framework';
-?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
-    </title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><?= $this->fetch('title') ?> - Clenance</title>
+
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
+    <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css') ?>
+    <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css') ?>
+    <?= $this->Html->css('http://fonts.googleapis.com/css?family=Roboto:400,700,300') ?>
+    <?= $this->Html->css('app.min.css') ?>
+
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+    <?= $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js') ?>
+    <?= $this->Html->script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js') ?>
+    <?= $this->Html->script('app.min.js') ?>
 </head>
+
 <body>
-    <header>
-        <div class="header-title">
-            <span><?= $this->fetch('title') ?></span>
-        </div>
-        <div class="header-help">
-            <span><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></span>
-            <span><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></span>
-        </div>
-    </header>
-    <div id="container">
 
-        <div id="content">
-            <?= $this->Flash->render() ?>
+<div class="page-wrap">
 
-            <div class="row">
-                <?= $this->fetch('content') ?>
+<nav class="navbar navbar-default navbar-clenance">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-principal">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand animated fadeIn" href="<?php echo $this->Url->build(['controller' => 'home', 'action' => 'index']); ?>">
+          <img src="img/logo_avene.png" class="img-responsive" alt="">
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-principal">
+      <ul class="nav navbar-nav pull-right animated fadeIn pos-r" id="navlist">
+        <li <?= ($this->request->params['controller'] == 'Home') ? 'class="active"' : ''; ?>>
+            <a href="<?php echo $this->Url->build(['controller' => 'home', 'action' => 'index']); ?>">Home</a>
+        </li>
+        <li <?= ($this->request->params['controller'] == 'Desafio') ? 'class="active"' : ''; ?>>
+            <a href="<?php echo $this->Url->build(['controller' => 'desafio', 'action' => 'index']); ?>">Desafio</a>
+        </li>
+        <li <?= ($this->request->params['controller'] == 'Wall') ? 'class="active"' : ''; ?>>
+            <a href="<?php echo $this->Url->build(['controller' => 'wall', 'action' => 'index']); ?>">Cleanance Wall</a>
+        </li>
+        <li <?= ($this->request->params['controller'] == 'Linha') ? 'class="active"' : ''; ?>>
+            <a href="<?php echo $this->Url->build(['controller' => 'linha', 'action' => 'index']); ?>">Linha Completa</a>
+        </li>
+        <li <?= ($this->request->params['controller'] == 'Regulamento') ? 'class="active"' : ''; ?>>
+            <a href="<?php echo $this->Url->build(['controller' => 'regulamento', 'action' => 'index']); ?>">Regulamento</a>
+        </li>
+      </ul>
+
+
+      <div class="clearfix"></div>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<?= $this->Flash->render() ?>
+<?= $this->fetch('content') ?>
+
+
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-xs-5 text-center">
+                <a href="#"><span class="hidden-xs hidden-sm">ENTRE EM</span> CONTATO</a>
+            </div>
+            <div class="col-lg-6  col-xs-7 text-center">
+                <a href="#" class="btn-rede">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="btn-rede">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="http://www.eau-thermale-avene.com.br/" target="_blank" class="hidden-xs">
+                    www.eau-thermale-avene.com.br
+                </a>
+            </div>
+            <div class="col-lg-3 hidden-xs text-right">
+                <a href="#">
+                    Avène 2015
+                </a>
             </div>
         </div>
-        <footer>
-        </footer>
     </div>
+</footer>
+
 </body>
 </html>
