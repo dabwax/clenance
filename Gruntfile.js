@@ -12,6 +12,7 @@ module.exports = function(grunt) {
               files: {
                 'webroot/js/app.min.js': [
                     'webroot/js/app.js',
+                    'webroot/js/desafio.js',
                     'webroot/vendor/lavalamp/jquery.lavalamp.min.js',
                     'webroot/vendor/perfect-scrollbar/js/perfect-scrollbar.jquery.js',
                     'webroot/vendor/maskedinput/jquery.maskedinput.min.js',
@@ -50,6 +51,7 @@ module.exports = function(grunt) {
                   'webroot/css/formulario.css',
                   'webroot/css/home.css',
                   'webroot/js/app.js',
+                  'webroot/js/desafio.js',
                 ],
                 tasks: ['default'],
                 options: {

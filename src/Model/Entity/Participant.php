@@ -3,6 +3,7 @@ namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
 use Cake\ORM\TableRegistry;
+use Cake\Utility\Inflector;
 
 class Participant extends Entity
 {
@@ -17,7 +18,9 @@ class Participant extends Entity
     public function uploadAttachment($participant_id, $upload) {
         if($upload['error'] == 0 && !empty($upload)) {
             // Atalho para o nome do arquivo temporário
-            $filename = $participant_id . '_' . $upload['name'];
+            $ext = pathinfo($upload['name'], PATHINFO_EXTENSION);
+            $name = pathinfo($upload['name'], PATHINFO_FILENAME);
+            $filename = $participant_id . '_' . Inflector::slug($name) . '.' . $ext;
 
             // Efetua o upload
             move_uploaded_file($upload['tmp_name'], WWW_ROOT . 'uploads/participants/' . $filename);
@@ -30,7 +33,7 @@ class Participant extends Entity
 
             $participants->save($participant);
 
-            return true;
+            return $filename;
         }
 
         // algo deu errado

@@ -21,3 +21,62 @@
 .ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y {
     background-color: #0099A8 !important;
 }
+.posicoes {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 50px;
+}
+.posicoes li {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #B7E6E8;
+    color: #FFF;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.posicoes li.atual {
+    background: #0099A8 !important;
+}
+.imagem {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+    background: #FFF;
+    padding: 10px;
+}
+.principal {
+    margin-top: 100px;
+}
+#filters {
+margin: 0px;
+padding: 0px;
+}
+#filters li {
+    display: inline-block;
+    width: 48%;
+    margin-left: 1%;
+    height: 70px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'CenturyGothic';
+    position: relative;
+    margin-bottom: 20px;
+    color: #FFF;
+    text-transform: uppercase;
+
+}
+#filters li span {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    background: rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+}
+#filters li a {
+    color: #000;
+}

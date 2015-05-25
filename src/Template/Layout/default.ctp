@@ -24,6 +24,7 @@
     <?= $this->Html->script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js') ?>
     <?= $this->Html->script('http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js') ?>
     <?= $this->Html->script('http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/localization/messages_pt_BR.js') ?>
+    <?= $this->Html->script('http://cdnjs.cloudflare.com/ajax/libs/camanjs/4.0.0/caman.full.min.js') ?>
     <?= $this->Html->script('app.min.js') ?>
 </head>
 
@@ -42,7 +43,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand animated fadeIn" href="<?php echo $this->Url->build(['controller' => 'home', 'action' => 'index']); ?>">
-          <img src="img/logo_avene.png" class="img-responsive" alt="">
+          <?php echo $this->Html->image("logo_avene.png", ['class' => 'img-responsive']); ?>
       </a>
     </div>
 
