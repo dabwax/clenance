@@ -5,16 +5,17 @@ module.exports = function(grunt) {
     var gruntConfig = {
         pkg: grunt.file.readJSON('package.json'),
         jshint: {
-            all: ['app/webroot/js/app.js']
+            all: ['webroot/js/app.js']
         },
         uglify: {
             target: {
               files: {
-                'app/webroot/js/app.min.js': [
-                    'app/webroot/js/app.js',
-                    'app/webroot/vendor/lavalamp/jquery.lavalamp.min.js',
-                    'app/webroot/vendor/perfect-scrollbar/js/perfect-scrollbar.jquery.js',
-                    'app/webroot/js/jquery.easing.1.3.js',
+                'webroot/js/app.min.js': [
+                    'webroot/js/app.js',
+                    'webroot/vendor/lavalamp/jquery.lavalamp.min.js',
+                    'webroot/vendor/perfect-scrollbar/js/perfect-scrollbar.jquery.js',
+                    'webroot/vendor/maskedinput/jquery.maskedinput.min.js',
+                    'webroot/js/jquery.easing.1.3.js',
                     ]
               }
             }
@@ -22,16 +23,16 @@ module.exports = function(grunt) {
         cssmin: {
           target: {
             files: {
-                'app/webroot/css/app.min.css': [
-                  'app/webroot/css/app.css',
-                  'app/webroot/vendor/animate/animate.css',
-                  'app/webroot/vendor/perfect-scrollbar/css/perfect-scrollbar.css',
-                  'app/webroot/css/media_queries.css',
-                  'app/webroot/css/cleanance_wall.css',
-                  'app/webroot/css/desafio.css',
-                  'app/webroot/css/footer.css',
-                  'app/webroot/css/formulario.css',
-                  'app/webroot/css/home.css',
+                'webroot/css/app.min.css': [
+                  'webroot/css/app.css',
+                  'webroot/vendor/animate/animate.css',
+                  'webroot/vendor/perfect-scrollbar/css/perfect-scrollbar.css',
+                  'webroot/css/media_queries.css',
+                  'webroot/css/cleanance_wall.css',
+                  'webroot/css/desafio.css',
+                  'webroot/css/footer.css',
+                  'webroot/css/formulario.css',
+                  'webroot/css/home.css',
                 ]
             }
           }
@@ -39,16 +40,16 @@ module.exports = function(grunt) {
         watch: {
             src: {
                 files: [
-                  'app/webroot/css/app.css',
-                  'app/webroot/vendor/animate/animate.css',
-                  'app/webroot/vendor/perfect-scrollbar/css/perfect-scrollbar.css',
-                  'app/webroot/css/media_queries.css',
-                  'app/webroot/css/cleanance_wall.css',
-                  'app/webroot/css/desafio.css',
-                  'app/webroot/css/footer.css',
-                  'app/webroot/css/formulario.css',
-                  'app/webroot/css/home.css',
-                  'app/webroot/js/app.js',
+                  'webroot/css/app.css',
+                  'webroot/vendor/animate/animate.css',
+                  'webroot/vendor/perfect-scrollbar/css/perfect-scrollbar.css',
+                  'webroot/css/media_queries.css',
+                  'webroot/css/cleanance_wall.css',
+                  'webroot/css/desafio.css',
+                  'webroot/css/footer.css',
+                  'webroot/css/formulario.css',
+                  'webroot/css/home.css',
+                  'webroot/js/app.js',
                 ],
                 tasks: ['default'],
                 options: {

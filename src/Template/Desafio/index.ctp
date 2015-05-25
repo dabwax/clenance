@@ -1,4 +1,4 @@
-<form action="" method="POST" class="formulario">
+<?php echo $this->Form->create("Participant", ['class' => 'formulario validar-formulario', 'type' => 'file']); ?>
 
 <div class="container">
     <div class="row">
@@ -12,20 +12,20 @@
                         <p>Preencha o formulário abaixo:</p>
 
                             <div class="form-group">
-                                <input type="text" placeholder="Nome" class="form-control" />
+                                <?php echo $this->Form->input("name", ['placeholder' => 'Nome', 'class' => 'form-control required', 'label' => false, 'div' => false]); ?>
                             </div>
                             <div class="form-group">
-                                <input type="text" placeholder="E-mail" class="form-control" />
+                                <?php echo $this->Form->input("email", ['placeholder' => 'E-mail', 'class' => 'form-control required email', 'label' => false, 'div' => false, 'type' => 'text']); ?>
                             </div>
                             <div class="form-group">
-                                <input type="text" placeholder="Telefone" class="form-control" />
+                                <?php echo $this->Form->input("phone", ['placeholder' => 'Telefone', 'class' => 'form-control required phone', 'label' => false, 'div' => false, 'type' => 'text']); ?>
                             </div>
                             <div class="form-group">
-                                <input type="file" />
+                                <?php echo $this->Form->input("attachment", ['class' => 'form-control required', 'label' => false, 'div' => false, 'type' => 'file']); ?>
                             </div>
                             <div class="form-group">
                                 <label class="checkbox">
-                                    <input type="checkbox" /> Aceito receber informações de Eau Thermale Avène.
+                                    <?php echo $this->Form->input("newsletter", ['type' => 'checkbox', 'label' => false]  ); ?> Aceito receber informações de Eau Thermale Avène.
                                 </label>
                             </div>
                     </div>
@@ -60,7 +60,7 @@
 
                                 <div class="form-group">
                                     <label class="checkbox" style="margin-top: 40px;">
-                                        <input type="checkbox" /> Li e aceito os termos da promoção
+                                        <?php echo $this->Form->input("tos", ['type' => 'checkbox', 'label' => false]  ); ?> Li e aceito os termos da promoção
                                     </label>
                                 </div>
 
@@ -69,10 +69,6 @@
                                 <button type="submit" class="btn btn-primary btn-participe">Próximo</button>
                             </div> <!-- .col-lg-6 -->
                             </div> <!-- .row -->
-
-                            <?php if($_POST) { ?>
-                            abacate
-                            <?php } ?>
 
 
                     </div>
@@ -85,4 +81,4 @@
     </div>
 </div>
 
-</form>
+<?php echo $this->Form->end(); ?>
