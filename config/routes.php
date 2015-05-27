@@ -48,6 +48,15 @@ Router::scope('/', function ($routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
     $routes->connect('/', ['controller' => 'Home', 'action' => 'index']);
+    $routes->connect('/desafio', ['controller' => 'Desafio', 'action' => 'index']);
+    $routes->connect('/desafio/etapa-1', ['controller' => 'Desafio', 'action' => 'etapa_1']);
+    $routes->connect('/desafio/etapa-2', ['controller' => 'Desafio', 'action' => 'etapa_2']);
+    $routes->connect('/cleanance-wall', ['controller' => 'Wall', 'action' => 'index']);
+    $routes->connect('/linha-completa', ['controller' => 'Linha', 'action' => 'index']);
+    $routes->connect('/linha-completa/higienizar', ['controller' => 'Linha', 'action' => 'higienizar']);
+    $routes->connect('/linha-completa/tonificar-e-cuidar', ['controller' => 'Linha', 'action' => 'tonificar_e_cuidar']);
+    $routes->connect('/linha-completa/proteger', ['controller' => 'Linha', 'action' => 'proteger']);
+    $routes->connect('/regulamento', ['controller' => 'Regulamento', 'action' => 'index']);
 
     /**
      * Connect catchall routes for all controllers.

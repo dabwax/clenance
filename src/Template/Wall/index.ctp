@@ -1,3 +1,6 @@
+<?php
+    $this->assign("title", "Cleanance Wall");
+?>
 <form action="" method="POST" class="formulario">
 
 <div class="container">
@@ -18,7 +21,7 @@
 
                 <div class="col-lg-3 col-md-4" style="padding-top: 20px;">
                     <div class="numeracao">
-                        63
+                        <?php echo sizeof($query); ?>
                     </div> <!-- .numeracao -->
                     <p class="numeracao-p">
                         Pessoas estão declarando seu amor por Cleanance!
@@ -29,18 +32,20 @@
 
                 <div class="row">
 
-                    <?php for($i = 1; $i <= 10; $i++) { ?>
+                    <?php foreach($participants as $p) { ?>
                     <div class="col-md-3">
-                        <div class="registro-cleanance-wall">
-                            <a href="interna-cleanance-wall.php">
-                            <img src="http://placehold.it/300x300" class="img-responsive" alt="">
+                        <div class="registro-cleanance-wall" style="height: 320px;">
+                            <a href="<?php echo $this->Url->build(['action' => 'visualizar', $p->id]); ?>">
+                            <div class="container-imagem">
+                                <?php echo $this->Html->image("/uploads/participants/" . $p->attachment); ?>
+                            </div>
                             <div class="pull-left">
-                                <p>Fulana</p>
+                                <p><?php echo $p->name; ?></p>
                             </div>
 
                             <div class="pull-right">
                                 <p class="etc">
-                                <i class="fa fa-heart-o"></i> 83 <i class="fa fa-comment-o"></i> 21
+                                <i class="fa fa-heart-o"></i> <?php echo $p->likes; ?> <i class="fa fa-comment-o"></i> <?php echo $p->comments_count; ?>
                                 </p>
                             </div>
 
@@ -52,23 +57,12 @@
 
                     <div class="clearfix"></div>
 
+
                     <nav class="text-center">
                       <ul class="pagination">
-                        <li>
-                          <a href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                          </a>
-                        </li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                          <a href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                          </a>
-                        </li>
+                        <?php echo $this->Paginator->prev(); ?>
+                        <?php echo $this->Paginator->numbers(); ?>
+                        <?php echo $this->Paginator->next(); ?>
                       </ul>
                     </nav>
 

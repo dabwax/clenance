@@ -11,4 +11,19 @@ class LinhaController extends AppController
 
     }
 
+    public function higienizar()
+    {
+
+    }
+
+    public function tonificar_e_cuidar()
+    {
+
+    }
+
+    public function proteger()
+    {
+
+    }
+
 }

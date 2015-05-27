@@ -34,10 +34,10 @@
 
                         <div class="clearfix"></div>
                     </div>
-                    <div class="col-lg-6 col-md-12 animated fadeIn">
-                        <h1 class="titulo-marca">Cleanance</h1>
-                        <h2 class="subtitulo-marca">Higieniza, purifica e combate</h2>
-                        <h3 class="subtitulo-marca">a oleosidade na origem</h3>
+                    <div class="col-lg-6 col-md-12">
+                        <h1 class="titulo-marca animated fadeInUp">Cleanance</h1>
+                        <h2 class="subtitulo-marca animated fadeInUp">Higieniza, purifica e combate</h2>
+                        <h3 class="subtitulo-marca animated fadeInUp">a oleosidade na origem</h3>
                     </div>
                 </div>
                 <div class="row">

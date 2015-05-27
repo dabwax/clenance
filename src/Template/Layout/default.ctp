@@ -28,7 +28,7 @@
     <?= $this->Html->script('app.min.js') ?>
 </head>
 
-<body>
+<body class="<?php echo strtolower($this->request->params['controller']); ?> <?php echo strtolower($this->request->params['controller']); ?>-<?php echo strtolower($this->request->params['action']); ?>">
 
 <div class="page-wrap">
 
@@ -51,19 +51,19 @@
     <div class="collapse navbar-collapse" id="navbar-principal">
       <ul class="nav navbar-nav pull-right animated fadeIn pos-r" id="navlist">
         <li <?= ($this->request->params['controller'] == 'Home') ? 'class="active"' : ''; ?>>
-            <a href="<?php echo $this->Url->build(['controller' => 'home', 'action' => 'index']); ?>">Home</a>
+            <a href="<?php echo $this->Url->build(['controller' => 'Home', 'action' => 'index']); ?>">Home</a>
         </li>
         <li <?= ($this->request->params['controller'] == 'Desafio') ? 'class="active"' : ''; ?>>
-            <a href="<?php echo $this->Url->build(['controller' => 'desafio', 'action' => 'index']); ?>">Desafio</a>
+            <a href="<?php echo $this->Url->build(['controller' => 'Desafio', 'action' => 'index']); ?>">Desafio</a>
         </li>
         <li <?= ($this->request->params['controller'] == 'Wall') ? 'class="active"' : ''; ?>>
-            <a href="<?php echo $this->Url->build(['controller' => 'wall', 'action' => 'index']); ?>">Cleanance Wall</a>
+            <a href="<?php echo $this->Url->build(['controller' => 'Wall', 'action' => 'index']); ?>">Cleanance Wall</a>
         </li>
         <li <?= ($this->request->params['controller'] == 'Linha') ? 'class="active"' : ''; ?>>
-            <a href="<?php echo $this->Url->build(['controller' => 'linha', 'action' => 'index']); ?>">Linha Completa</a>
+            <a href="<?php echo $this->Url->build(['controller' => 'Linha', 'action' => 'index']); ?>">Linha Completa</a>
         </li>
         <li <?= ($this->request->params['controller'] == 'Regulamento') ? 'class="active"' : ''; ?>>
-            <a href="<?php echo $this->Url->build(['controller' => 'regulamento', 'action' => 'index']); ?>">Regulamento</a>
+            <a href="<?php echo $this->Url->build(['controller' => 'Regulamento', 'action' => 'index']); ?>">Regulamento</a>
         </li>
       </ul>
 
@@ -105,6 +105,8 @@
         </div>
     </div>
 </footer>
+
+<script src="//localhost:35729/livereload.js"></script>
 
 </body>
 </html>

@@ -16,6 +16,7 @@ module.exports = function(grunt) {
                     'webroot/vendor/lavalamp/jquery.lavalamp.min.js',
                     'webroot/vendor/perfect-scrollbar/js/perfect-scrollbar.jquery.js',
                     'webroot/vendor/maskedinput/jquery.maskedinput.min.js',
+                    'webroot/vendor/imgliquid/js/imgLiquid-min.js',
                     'webroot/js/jquery.easing.1.3.js',
                     ]
               }
@@ -34,6 +35,7 @@ module.exports = function(grunt) {
                   'webroot/css/footer.css',
                   'webroot/css/formulario.css',
                   'webroot/css/home.css',
+                  'webroot/css/linha.css',
                 ]
             }
           }
@@ -52,6 +54,8 @@ module.exports = function(grunt) {
                   'webroot/css/home.css',
                   'webroot/js/app.js',
                   'webroot/js/desafio.js',
+                  'webroot/css/linha.css',
+                  'src/Template/**/*.ctp'
                 ],
                 tasks: ['default'],
                 options: {

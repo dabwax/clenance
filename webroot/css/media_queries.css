@@ -1,7 +1,12 @@
 /*
  * celular
  */
-@media only screen and (max-device-width: 480px) {
+@media (max-width: 700px) {
+    .clearfix-on-mobile {
+        clear: both;
+    }
+}
+@media (max-width: 480px) {
 .coracoes-3 {
     position: relative !important;
     left: 0px !important;
@@ -55,6 +60,14 @@ footer a {
  tablet e celular
  */
 @media (max-width: 991px) {
+.img-responsive-on-mobile {
+    display: block;
+      max-width: 100%;
+      height: auto;
+}
+.linha {
+    background-position: center 76px !important;
+}
 .center-on-mobile {
         text-align: center;
 }

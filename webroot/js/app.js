@@ -1,5 +1,21 @@
 $(document).ready(function() {
 
+  $(".btn-tooltip").click(function() {
+    $(".btn-tooltip").removeClass("ativo");
+    $(this).addClass("ativo");
+    $(".conteudo-tooltip, .tracejado").addClass("hide");
+    $(this).parent().find(".conteudo-tooltip, .tracejado").removeClass("hide");
+  });
+
+  $(".conteudo-tooltip .btn").click(function() {
+    $(".btn-tooltip").removeClass("ativo");
+    $(".conteudo-tooltip, .tracejado").addClass("hide");
+  });
+
+    $(".container-imagem").imgLiquid({
+      fill: true
+    });
+
     $(".validar-formulario").validate();
 
     $('.regulamento-container').perfectScrollbar();

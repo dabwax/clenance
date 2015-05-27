@@ -31,7 +31,7 @@
                     </div>
 
                     <div class="col-lg-8">
-                        <div class="regulamento">
+                        <div class="regulamento2">
 
                             <div class="regulamento-container">
 

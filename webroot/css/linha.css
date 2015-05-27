@@ -1,0 +1,289 @@
+.bolinhas {
+    display: inline-block;
+    width: 100%;
+    margin-top: 15px;
+}
+.bolinhas a {
+    float: left;
+    display: inline;
+    width: 82px;
+    height: 83px;
+    text-align: center;
+    background: url("../img/botoes.png") no-repeat;
+    color: #FFF;
+    font-family: 'CenturyGothic';
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 12px;
+}
+.bolinhas a span {
+    margin-top: 18px;
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.bolinhas a:hover, .bolinhas a.ativo {
+    background: url("../img/botoes-2.png") no-repeat;
+}
+.bolinhas a:hover span, .bolinhas a.ativo span {
+    font-size: 24px;
+}
+.mt30 {
+    margin-top: 0px;
+}
+.chamada {
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    font-family: 'CenturyGothic';
+    position: relative;
+    top: 30px;
+    color: #0099A8;
+    text-transform: uppercase;
+}
+.sub-chamada {
+    position: relative;
+    top: 40px;
+    font-family: 'CenturyGothic';
+    font-size: 16px;
+}
+.box-branco {
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.5);
+    clear: both;
+    display: inline-block;
+width: 100%;
+padding-top: 24px;
+padding-bottom: 24px;
+border-radius: 16px;
+}
+.box-branco p {
+    font-family: 'CenturyGothic';
+    font-size: 16px;
+    line-height: 20px;
+}
+.box-dica-dermatologista {
+    float: left;
+    display: inline;
+    width: 100%;
+    clear: both;
+}
+.box-dica-dermatologista  .chamada {
+    top: 0px !important;
+}
+.btn-tooltip {
+    width: 35px;
+    height: 35px;
+    background: url("../img/bolinha_sinalizadora-2.png") no-repeat;
+    display: inline-block;
+    cursor: pointer;
+}
+.btn-tooltip:hover {
+    opacity: 0.5;
+}
+.btn-tooltip:active,
+.btn-tooltip:focus {
+    opacity: 0.3;
+}
+.btn-tooltip.ativo {
+    background: url("../img/bolinha_sinalizadora.png") no-repeat !important;
+}
+.conteudo-tooltip {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 6px;
+    position: absolute;
+    z-index: 100;
+    border-radius: 10px;
+}
+.conteudo-tooltip .btn {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: #000;
+}
+.conteudo-tooltip img {
+    margin-right: 22px;
+    height: 60px;
+    margin-top: 2px;
+}
+.img-linha-cleanance {
+    margin-top: 180px;
+    display: inline-block;
+}
+.nome-produto {
+    float: left;
+    display: inline;
+    width: 65%;
+}
+.nome-produto .titulo-marca {
+    font-size: 18px;
+    margin-top: 0px;
+}
+.nome-produto .subtitulo-marca {
+    font-size: 11px;
+    color: #0099A8;
+    margin-top: 0px;
+}
+.conteudo-tooltip .titulo-azul {
+    text-transform: uppercase;
+    color: #0099A8;
+    font-family: 'CenturyGothic';
+}
+.conteudo-tooltip p {
+    color: #666;
+    font-size: 12px;
+    font-family: 'CenturyGothic';
+    margin-bottom: 12px;
+}
+.tooltip-higienizar-1 {
+    position: absolute;
+    left: 174px;
+    top: 380px;
+}
+.tooltip-higienizar-1 .conteudo-tooltip {
+    width: 300px;
+    left: 0px;
+    top: -251px;
+}
+.tooltip-higienizar-1 .tracejado {
+    position: absolute;
+    left: 14px;
+    top: -30px;
+    width: 2px;
+    height: 31px;
+    border-left: 1px dashed #666;
+}
+.tooltip-higienizar-2 {
+    position: absolute;
+    left: 335px;
+    top: 270px;
+}
+.tooltip-higienizar-2 .conteudo-tooltip {
+    width: 450px;
+    left: 0px;
+    top: -251px;
+}
+.tooltip-higienizar-2 .tracejado {
+    position: absolute;
+    left: 14px;
+    top: -30px;
+    width: 2px;
+    height: 31px;
+    border-left: 1px dashed #666;
+}
+.tooltip-higienizar-3 {
+    position: absolute;
+    left: 630px;
+    top: 384px;
+}
+.tooltip-higienizar-3 .conteudo-tooltip {
+    width: 450px;
+    right: 0px;
+    top: -271px;
+}
+.tooltip-higienizar-3 .tracejado {
+    position: absolute;
+    left: 14px;
+    top: -30px;
+    width: 2px;
+    height: 31px;
+    border-left: 1px dashed #666;
+}
+.tooltip-higienizar-4 {
+    position: absolute;
+    right: 225px;
+    top: 290px;
+}
+.tooltip-higienizar-4 .conteudo-tooltip {
+    width: 450px;
+    right: 0px;
+    top: -271px;
+}
+.tooltip-higienizar-4 .tracejado {
+    position: absolute;
+    left: 14px;
+    top: -30px;
+    width: 2px;
+    height: 31px;
+    border-left: 1px dashed #666;
+}
+.tooltip-higienizar-5 {
+    position: absolute;
+    right: 0px;
+    top: 250px;
+}
+.tooltip-higienizar-5 .conteudo-tooltip {
+    width: 450px;
+    right: 0px;
+    top: -208px;
+}
+.tooltip-higienizar-5 .tracejado {
+    position: absolute;
+    left: 14px;
+    top: -30px;
+    width: 2px;
+    height: 31px;
+    border-left: 1px dashed #666;
+}
+.tooltip-higienizar-6 {
+    position: absolute;
+    left: 298px;
+    top: 310px;
+}
+.tooltip-higienizar-6 .conteudo-tooltip {
+    width: 450px;
+    right: 0px;
+    top: -240px;
+}
+.tooltip-higienizar-6 .tracejado {
+    position: absolute;
+    left: 14px;
+    top: -30px;
+    width: 2px;
+    height: 31px;
+    border-left: 1px dashed #666;
+}
+.tooltip-higienizar-7 {
+    position: absolute;
+    left: 578px;
+    top: 310px;
+}
+.tooltip-higienizar-7 .conteudo-tooltip {
+    width: 450px;
+    right: 0px;
+    top: -240px;
+}
+.tooltip-higienizar-7 .tracejado {
+    position: absolute;
+    left: 14px;
+    top: -30px;
+    width: 2px;
+    height: 31px;
+    border-left: 1px dashed #666;
+}
+.tooltip-higienizar-8 {
+    position: absolute;
+    right: 10px;
+    top: 310px;
+}
+.tooltip-higienizar-8 .conteudo-tooltip {
+    width: 450px;
+    right: 0px;
+    top: -240px;
+}
+.tooltip-higienizar-8 .tracejado {
+    position: absolute;
+    left: 14px;
+    top: -30px;
+    width: 2px;
+    height: 31px;
+    border-left: 1px dashed #666;
+}
+.laranja .titulo-marca {
+    color: #EA6F0C;
+}
+.laranja .subtitulo-marca {
+    color: #EA6F0C;
+}
