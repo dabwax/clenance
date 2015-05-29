@@ -80,3 +80,7 @@ padding: 0px;
 #filters li a {
     color: #000;
 }
+.jwc_frame, .jwc_image {
+    transition: none !important;
+    -webkit-transition: none !important;
+}

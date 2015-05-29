@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
+use App\Model\Entity\Participant;
 
 /**
  *  Controller referente as páginas do Desafio.
@@ -60,14 +61,7 @@ class DesafioController extends AppController
     {
         $session = $this->request->session();
         $participant = $session->read("last_participant");
-        $effects = [
-            'sunrise' => 'Por do Sol',
-            'love' => 'Amor',
-            'pinhole' => 'Pinha',
-            'hazyDays' => 'Dia Acelerado',
-            'hipster' => 'Hipster',
-            'hippie' => 'Hippie',
-        ];
+        $participantEntity = new Participant($participant);
 
         $this->set(compact("participant", "effects"));
 
@@ -83,7 +77,13 @@ class DesafioController extends AppController
             }
             if($acao == "proximo") {
 
-                $session->write('imagem_base64', $this->request->data['imagem_base64']);
+                $efeito = $this->request->data['efeito'];
+                $x = $this->request->data['cropX'];
+                $y = $this->request->data['cropY'];
+                $w = $this->request->data['cropW'];
+                $h = $this->request->data['cropH'];
+
+                $participantEntity->crop_user_image($efeito, $x, $y, $w, $h);
 
                 return $this->redirect( ['action' => 'etapa_2'] );
 
@@ -94,23 +94,29 @@ class DesafioController extends AppController
     public function etapa_2()
     {
         $session = $this->request->session();
-        $imagem_base64 = $session->read("imagem_base64");
         $participant = $session->read("last_participant");
 
-        $filename = $participant['attachment'];
+        $participantsTable = TableRegistry::get('Participants');
 
-        $this->base64_to_jpeg($imagem_base64, WWW_ROOT . "uploads/participants/" . $filename);
+        $participant = $participantsTable->get($participant['id']);
 
+        $this->set(compact("participant"));
+
+        if($this->request->is("post")) {
+            $acao = $this->request->data['acao'];
+
+            if($acao == "voltar") {
+                $session->delete('efeito');
+
+                return $this->redirect( ['action' => 'etapa_1'] );
+
+            }
+            if($acao == "proximo") {
+
+                return $this->redirect( ['action' => 'etapa_3'] );
+
+            }
+        }
     }
 
-    function base64_to_jpeg($base64_string, $output_file) {
-        $ifp = fopen($output_file, "wb");
-
-        $data = explode(',', $base64_string);
-
-        fwrite($ifp, base64_decode($data[1]));
-        fclose($ifp);
-
-        return $output_file;
-    }
 }

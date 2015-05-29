@@ -60,7 +60,7 @@
 
                                 <div class="form-group">
                                     <label class="checkbox" style="margin-top: 40px;">
-                                        <?php echo $this->Form->input("tos", ['type' => 'checkbox', 'label' => false]  ); ?> Li e aceito os termos da promoção
+                                        <?php echo $this->Form->input("tos", ['type' => 'checkbox', 'label' => false, 'required' => true]  ); ?> Li e aceito os termos da promoção
                                     </label>
                                 </div>
 

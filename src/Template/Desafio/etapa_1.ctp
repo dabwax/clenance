@@ -1,7 +1,10 @@
 <?php echo $this->Form->create("Participant", ['class' => 'formulario validar-formulario', 'type' => 'file']); ?>
 
-<?php echo $this->Form->input("filtro_atual", ['type' => 'hidden', 'value' => 'nenhum', 'class' => 'filtro_atual'] ); ?>
-<?php echo $this->Form->input("imagem_base64", ['type' => 'hidden', 'value' => '', 'class' => 'imagem_base64'] ); ?>
+<?php echo $this->Form->input("efeito", ['type' => 'hidden', 'value' => 'nenhum', 'class' => 'campo-efeito'] ); ?>
+<?php echo $this->Form->input("cropX", ['type' => 'hidden', 'value' => '0', 'class' => 'campo-cropx'] ); ?>
+<?php echo $this->Form->input("cropY", ['type' => 'hidden', 'value' => '0', 'class' => 'campo-cropy'] ); ?>
+<?php echo $this->Form->input("cropW", ['type' => 'hidden', 'value' => '0', 'class' => 'campo-cropw'] ); ?>
+<?php echo $this->Form->input("cropH", ['type' => 'hidden', 'value' => '0', 'class' => 'campo-croph'] ); ?>
 
 <div class="container">
     <div class="row">
@@ -25,23 +28,49 @@
                         <div class="clearfix"></div>
 
                         <ul id="filters">
-                            <?php foreach($effects as $s => $e) : ?>
-                            <li> <a href="javascript:;" class="btn-efeito btn-efeito-<?php echo strtolower($s); ?>" id="<?php echo $s; ?>">
-                                <?php echo $this->Html->image('/uploads/participants/' . $participant['attachment'], ['style' => 'width: 100%; height: 150px;', 'class' => 'img-pequena', 'data-filtro' => $s]); ?>
-                                <span>  <?php echo $e; ?> </span>
-                                </a> </li>
-                        <?php endforeach; ?>
+                            <li>
+                                <a href="javascript:;" class="btn-efeito" data-efeito="efeito1">
+                                    <?php echo $this->Html->image('/uploads/participants/efeito1_' . $participant['attachment'], ['style' => 'width: 100%; height: 150px;', 'class' => 'img-pequena']); ?>
+                                    <span>Gotham </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="btn-efeito" data-efeito="efeito2">
+                                    <?php echo $this->Html->image('/uploads/participants/efeito2_' . $participant['attachment'], ['style' => 'width: 100%; height: 150px;', 'class' => 'img-pequena']); ?>
+                                    <span>Nashville </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="btn-efeito" data-efeito="efeito3">
+                                    <?php echo $this->Html->image('/uploads/participants/efeito3_' . $participant['attachment'], ['style' => 'width: 100%; height: 150px;', 'class' => 'img-pequena']); ?>
+                                    <span>Lomo </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="btn-efeito" data-efeito="efeito4">
+                                    <?php echo $this->Html->image('/uploads/participants/efeito4_' . $participant['attachment'], ['style' => 'width: 100%; height: 150px;', 'class' => 'img-pequena']); ?>
+                                    <span>Kelvin </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="btn-efeito" data-efeito="efeito5">
+                                    <?php echo $this->Html->image('/uploads/participants/efeito5_' . $participant['attachment'], ['style' => 'width: 100%; height: 150px;', 'class' => 'img-pequena']); ?>
+                                    <span>Toaster </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="btn-efeito" data-efeito="efeito6">
+                                    <?php echo $this->Html->image('/uploads/participants/efeito6_' . $participant['attachment'], ['style' => 'width: 100%; height: 150px;', 'class' => 'img-pequena']); ?>
+                                    <span>Tilt Shift </span>
+                                </a>
+                            </li>
                         </ul>
 
                     </div> <!-- lateral -->
 
                     <div class="principal col-lg-7 text-center">
 
-                        <?php echo $this->Html->image('/uploads/participants/' . $participant['attachment'], ['style' => 'width: 100%;', 'class' => 'img-original hide']); ?>
-
-                        <div class="imagem">
-                            <?php echo $this->Html->image('/uploads/participants/' . $participant['attachment'], ['style' => 'width: 100%;']); ?>
-                        </div>
+                            <?php echo $this->Html->image('/uploads/participants/' . $participant['attachment'], ['style' => '', 'class' => 'crop_me']); ?>
 
                         <div class="clearfix"></div>
 

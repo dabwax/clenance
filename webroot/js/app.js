@@ -1,5 +1,16 @@
 $(document).ready(function() {
 
+  $('img.crop_me').jWindowCrop({
+    targetWidth:500,
+    targetHeight:500,
+    onChange: function(result) {
+        $(".campo-cropx").val(result.cropX);
+        $(".campo-cropy").val(result.cropY);
+        $(".campo-cropw").val(result.cropW);
+        $(".campo-croph").val(result.cropH);
+    }
+});
+
   $(".btn-tooltip").click(function() {
     $(".btn-tooltip").removeClass("ativo");
     $(this).addClass("ativo");
