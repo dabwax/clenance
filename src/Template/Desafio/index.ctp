@@ -20,10 +20,10 @@
                             <div class="form-group">
                                 <?php echo $this->Form->input("phone", ['placeholder' => 'Telefone', 'class' => 'form-control required phone', 'label' => false, 'div' => false, 'type' => 'text']); ?>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group campo-anexo">
                                 <?php echo $this->Form->input("attachment", ['class' => 'form-control required', 'label' => false, 'div' => false, 'type' => 'file']); ?>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group campo-newsletter">
                                 <label class="checkbox">
                                     <?php echo $this->Form->input("newsletter", ['type' => 'checkbox', 'label' => false]  ); ?> Aceito receber informações de Eau Thermale Avène.
                                 </label>
@@ -58,7 +58,7 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 
-                                <div class="form-group">
+                                <div class="form-group campo-termos-de-uso">
                                     <label class="checkbox" style="margin-top: 40px;">
                                         <?php echo $this->Form->input("tos", ['type' => 'checkbox', 'label' => false, 'required' => true]  ); ?> Li e aceito os termos da promoção
                                     </label>

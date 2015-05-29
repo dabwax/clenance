@@ -1,5 +1,15 @@
 <?php echo $this->Form->create("Participant", ['class' => 'formulario validar-formulario', 'type' => 'file']); ?>
 
+<div class="campos-stickers">
+    <?php echo $this->Form->input("stickers_total", ['type' => 'hidden', 'value' => 0, 'class' => 'referencia-sticker-total']); ?>
+    <?php echo $this->Form->input("stickers.0.sticker_filename", ['type' => 'hidden', 'class' => 'referencia-sticker-filename']); ?>
+    <?php echo $this->Form->input("stickers.0.sticker_width", ['type' => 'hidden', 'class' => 'referencia-sticker-width']); ?>
+    <?php echo $this->Form->input("stickers.0.sticker_height", ['type' => 'hidden', 'class' => 'referencia-sticker-height']); ?>
+    <?php echo $this->Form->input("stickers.0.sticker_rotatex", ['type' => 'hidden', 'class' => 'referencia-sticker-rotatex']); ?>
+    <?php echo $this->Form->input("stickers.0.sticker_rotatey", ['type' => 'hidden', 'class' => 'referencia-sticker-rotatey']); ?>
+    <?php echo $this->Form->input("stickers.0.sticker_rotatez", ['type' => 'hidden', 'class' => 'referencia-sticker-rotatez']); ?>
+</div>
+
 <div class="container">
     <div class="row">
 
@@ -17,17 +27,34 @@
                             <li class="">3</li>
                         </ul>
 
-                        <p class="col-lg-9">Inclua um dos filtros que deixarão seu momento ainda mais especial:</p>
+                        <p class="col-lg-9">Selecione quantos stickers quiser:</p>
 
                         <div class="clearfix"></div>
+
+                        <ul>
+                            <?php foreach($stickers as $s) : ?>
+                            <li>
+                                <a href="#" class="btn-sticker">
+                                    <img src="<?php echo $s['path']; ?>" width="<?php echo $s['width']; ?>" height="<?php echo $s['height']; ?>" />
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                        </ul>
+
+                        <?php if(empty($stickers)) : ?>
+                            <div class="alert alert-info">
+                                Não há stickers disponíveis.
+                            </div>
+                        <?php endif; ?>
 
                     </div> <!-- lateral -->
 
                     <div class="principal col-lg-7 text-center">
 
+                        <div class="container-imagem-etapa2">
                             <?php
-
-                            echo $this->Html->image('/uploads/participants/' . $participant->attachment_cropped, ['style' => '', 'class' => 'img-responsive']); ?>
+                            echo $this->Html->image('/uploads/participants/' . $participant->attachment_cropped, ['style' => 'width: 100%;', 'class' => 'img-responsive']); ?>
+                        </div>
 
                         <div class="clearfix"></div>
 
@@ -45,3 +72,12 @@
 </div>
 
 <?php echo $this->Form->end(); ?>
+
+<script id="stickerImgTmpl" type="text/x-jsrender">
+{{for dados}}
+<div class="container-sticker-{{:i}} container-sticker" style="z-index: {{:i}}; width: {{:width}}px; height: {{:height}}px; display: none;">
+    <a href="javascript:;" class="btn-remover-sticker" data-i="{{:i}}"></a>
+    <img src="{{:filename}}" width="{{:width}}" height="{{:height}}" class="rotacionar-imagem sticker-{{:i}} img-sticker" />
+</div>
+{{/for}}
+</script>

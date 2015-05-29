@@ -4,6 +4,7 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 use Cake\ORM\TableRegistry;
 use Cake\Utility\Inflector;
+use Cake\Routing\Router;
 
 class Participant extends Entity
 {
@@ -75,7 +76,18 @@ class Participant extends Entity
         return false;
     }
 
-    public function crop_user_image($efeito, $x, $y, $w, $h) {
+/**
+ * Função utilizada para efetuar o crop na imagem do participante.
+ *
+ * @param  [string] $efeito [Qual efeito foi utilizado - efeito1, efeito2, etc]
+ * @param  [integer] $x      [Posição X do crop]
+ * @param  [integer] $y      [Posição Y do crop]
+ * @param  [integer] $w      [Largura do crop]
+ * @param  [integer] $h      [Altura do crop]
+ * @return [string]         [Nome da imagem croppada]
+ */
+    public function crop_user_image($efeito, $x, $y, $w, $h)
+    {
 
             require_once WWW_ROOT . 'vendor/wideimage/WideImage.php';
 
@@ -101,5 +113,45 @@ class Participant extends Entity
             $participants->save($this);
 
             return $newfilename;
+    }
+
+/**
+ * Função utilizada para recuperar todos os stickers disponíveis.
+ * Utilizado na etapa 2 do desafio.
+ *
+ * @return [void]
+ */
+    public function getStickers()
+    {
+        // Puxa todos os arquivos da pasta de stickers
+        $path = WWW_ROOT . 'img/stickers/';
+        $files = array_diff(scandir($path), array('..', '.', 'bkp'));
+
+        // Por questões de organização
+        sort($files);
+
+        $tmp = array();
+
+        // Itera as imagens disponíveis
+        foreach($files as $f) {
+            // Caminho no sistema da imagem
+            $imagepath = $path . $f;
+            // Recupera as dimensões da imagem
+            $imagesize = getimagesize($imagepath);
+
+            // Salva os dados da imagem
+            $tmp[] = array(
+                'filename' => $f,
+                'path' => Router::url('/img/stickers/' . $f),
+                'width' => $imagesize[0],
+                'height' => $imagesize[1],
+            );
+        }
+
+        // Transforma a variável temporária na definitiva
+        $files = $tmp;
+
+        // Retorna os stickers
+        return $files;
     }
 }

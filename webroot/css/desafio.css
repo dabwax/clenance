@@ -84,3 +84,68 @@ padding: 0px;
     transition: none !important;
     -webkit-transition: none !important;
 }
+.container-imagem-etapa2 {
+    float: left;
+    display: inline;
+    width: 500px;
+    position: relative;
+}
+.container-sticker {
+    position: absolute !important;
+    left: 0px;
+    top: 0px;
+    transition: none !important;
+    -webkit-transition: none !important;
+    cursor: move;
+    padding: 6px;
+}
+.container-sticker.visivel {
+    border: 1px dashed #CCC;
+}
+.container-sticker.visivel .ui-rotatable-handle {
+    display: block !important;
+}
+.container-sticker.visivel .ui-resizable-se {
+    display: block !important;
+}
+.container-sticker img {
+    width: 100%;
+    height: 100%;
+}
+.ui-rotatable-handle {
+    width: 28px;
+    height: 38px;
+    background: url("../img/icone-drag.png") no-repeat;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin-left: -14px;
+    margin-top: -20px;
+    display: none !important;
+}
+.notifyjs-wrapper {
+    z-index: 100 !important;
+}
+.notifyjs-wrapper *, ..notifyjs-wrapper {
+    transition: none !important;
+    -webkit-transition: none !important;
+}
+.ui-resizable-se {
+    width: 16px !important;
+    height: 16px !important;
+    background: url("../img/icone-resize.png") no-repeat !important;
+    background-position: 0px !important;
+    background-size: 100% !important;
+    display: none !important;
+}
+.btn-remover-sticker {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin-top: -20px;
+    margin-right: -20px;
+    width: 30px;
+    height: 30px;
+    background: url("../img/icone-fechar.png") no-repeat !important;
+    background-size: 100% !important;
+}
