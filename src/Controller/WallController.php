@@ -46,5 +46,17 @@ class WallController extends AppController
         $participants = $this->paginate($query);
 
         $this->set(compact("query", "participants", "p"));
+
+        if($this->request->is("post")) {
+            $p = $participantsTable->get($id);
+
+            $p->likes = $p->likes + 1;
+
+            $participantsTable->save($p);
+
+            $this->Flash->success("O seu voto foi computado com sucesso!");
+
+            return $this->redirect(['action' => 'visualizar', $id]);
+        }
     }
 }

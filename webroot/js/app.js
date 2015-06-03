@@ -2,8 +2,8 @@ $(document).ready(function() {
 
   $(".btn-fancybox").fancybox({
     type: "iframe",
-    maxWidth: 500,
-    height: 500,
+    width: '70%',
+    height: 650,
     autoSize: false
   });
 

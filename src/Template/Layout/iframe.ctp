@@ -76,79 +76,11 @@
 
 <div class="page-wrap">
 
-<nav class="navbar navbar-default navbar-clenance">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-principal">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand animated fadeIn" href="<?php echo $this->Url->build(['controller' => 'home', 'action' => 'index']); ?>">
-          <?php echo $this->Html->image("logo_avene.png", ['class' => 'img-responsive']); ?>
-      </a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="navbar-principal">
-      <ul class="nav navbar-nav pull-right animated fadeIn pos-r" id="navlist">
-        <li <?= ($this->request->params['controller'] == 'Home') ? 'class="active"' : ''; ?>>
-            <a href="<?php echo $this->Url->build(['controller' => 'Home', 'action' => 'index']); ?>">Home</a>
-        </li>
-        <li <?= ($this->request->params['controller'] == 'Desafio') ? 'class="active"' : ''; ?>>
-            <a href="<?php echo $this->Url->build(['controller' => 'Desafio', 'action' => 'index']); ?>">Desafio</a>
-        </li>
-        <li <?= ($this->request->params['controller'] == 'Wall') ? 'class="active"' : ''; ?>>
-            <a href="<?php echo $this->Url->build(['controller' => 'Wall', 'action' => 'index']); ?>">Cleanance Wall</a>
-        </li>
-        <li <?= ($this->request->params['controller'] == 'Linha') ? 'class="active"' : ''; ?>>
-            <a href="<?php echo $this->Url->build(['controller' => 'Linha', 'action' => 'index']); ?>">Linha Completa</a>
-        </li>
-        <li <?= ($this->request->params['controller'] == 'Regulamento') ? 'class="active"' : ''; ?>>
-            <a href="<?php echo $this->Url->build(['controller' => 'Regulamento', 'action' => 'index']); ?>">Regulamento</a>
-        </li>
-      </ul>
-
-
-      <div class="clearfix"></div>
-
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
 <?= $this->Flash->render() ?>
 <?= $this->fetch('content') ?>
 
 
 </div>
-
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-xs-5 text-center">
-                <a href="http://www.eau-thermale-avene.com.br/contactar-nos" target="_blank"><span class="hidden-xs hidden-sm">ENTRE EM</span> CONTATO</a>
-            </div>
-            <div class="col-lg-6  col-xs-7 text-center">
-                <a href="https://www.facebook.com/AveneBrasilOficial" target="_blank" class="btn-rede">
-                    <i class="fa fa-facebook"></i>
-                </a>
-                <a href="https://instagram.com/avenebrasil/" target="_blank" class="btn-rede">
-                    <i class="fa fa-instagram"></i>
-                </a>
-                <a href="http://www.eau-thermale-avene.com.br/" target="_blank" class="hidden-xs">
-                    www.eau-thermale-avene.com.br
-                </a>
-            </div>
-            <div class="col-lg-3 hidden-xs text-right">
-                <a href="http://www.eau-thermale-avene.com.br/">
-                    Avène 2015
-                </a>
-            </div>
-        </div>
-    </div>
-</footer>
 
 <script src="//localhost:35729/livereload.js"></script>
 
