@@ -15,6 +15,9 @@ class WallController extends AppController
         'limit' => 10,
         'order' => [
             'Participants.created' => 'desc'
+        ],
+        'conditions' => [
+            'Participants.approved' => 1
         ]
     ];
 
@@ -35,6 +38,7 @@ class WallController extends AppController
 
     public function visualizar($id)
     {
+        $this->layout = "iframe";
 
         $participantsTable = TableRegistry::get("Participants");
         $query = $participantsTable->find("all");

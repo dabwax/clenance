@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+  $(".btn-fancybox").fancybox({
+    type: "iframe",
+    maxWidth: 500,
+    height: 500,
+    autoSize: false
+  });
+
   $('img.crop_me').jWindowCrop({
     targetWidth:500,
     targetHeight:500,

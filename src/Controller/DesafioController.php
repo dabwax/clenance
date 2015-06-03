@@ -4,6 +4,7 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
 use App\Model\Entity\Participant;
+use Cake\View\UrlHelper\UrlHelper;
 
 /**
  *  Controller referente as páginas do Desafio.
@@ -131,10 +132,57 @@ class DesafioController extends AppController
             // Se for para próximo, vai para a etapa 3
             if($acao == "proximo") {
 
+                $participant->saveStickers($this->request->data);
+
                 return $this->redirect( ['action' => 'etapa_3'] );
 
             }
         }
+    }
+
+    public function etapa_3()
+    {
+
+        // Le os dados do participante
+        $session = $this->request->session();
+        $participant = $session->read("last_participant");
+        $participantsTable = TableRegistry::get('Participants');
+        $participant = $participantsTable->get($participant['id']);
+
+        // Envia pra view
+        $this->set(compact("participant", "stickers"));
+    }
+
+    public function salvar()
+    {
+        // Le os dados do participante
+        $session = $this->request->session();
+        $participant = $session->read("last_participant");
+        $participantsTable = TableRegistry::get('Participants');
+        $participant = $participantsTable->get($participant['id']);
+
+        $file_url = 'uploads' . DS . 'participants' . DS . $participant->attachment_cropped;
+
+        $this->response->file($file_url, ['download' => true]);
+
+        return $this->response;
+    }
+
+    public function publicar()
+    {
+        // Le os dados do participante
+        $session = $this->request->session();
+        $participant = $session->read("last_participant");
+        $participantsTable = TableRegistry::get('Participants');
+        $participant = $participantsTable->get($participant['id']);
+
+        $participant->approved = 1;
+
+        $participantsTable->save($participant);
+
+        $this->Flash->success("A sua foto foi publicada com sucesso. Aguarde a aprovação de um mediador. Isso pode levar até 1 dia útil.");
+
+        return $this->redirect(['controller' => 'home', 'action' => 'index', $participant['id']]);
     }
 
 }

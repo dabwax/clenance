@@ -103,6 +103,7 @@ $(document).ready(function() {
             var i = $(this).data("i");
 
             $(this).parent().fadeOut(500);
+
             stickersFila = jQuery.grep(stickersFila, function(value) {
               return value.i != i;
             });
@@ -111,6 +112,7 @@ $(document).ready(function() {
 
             $(".referencia-sticker-total").val(total - 1);
 
+            $(".sticker-" + i + "-filename").remove();
             $(".sticker-" + i + "-width").remove();
             $(".sticker-" + i + "-height").remove();
             $(".sticker-" + i + "-rotatex").remove();

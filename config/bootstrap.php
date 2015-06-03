@@ -202,3 +202,4 @@ DispatcherFactory::add('ControllerFactory');
 Type::build('datetime')->useLocaleParser();
 
 Plugin::load('Utils');
+Plugin::load('Cms', ['bootstrap' => false, 'routes' => true, 'autoload' => true]);

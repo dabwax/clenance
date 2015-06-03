@@ -21,7 +21,7 @@
 
                 <div class="col-lg-3 col-md-4" style="padding-top: 20px;">
                     <div class="numeracao">
-                        <?php echo sizeof($query); ?>
+                        <?php echo $query->count(); ?>
                     </div> <!-- .numeracao -->
                     <p class="numeracao-p">
                         Pessoas estão declarando seu amor por Cleanance!
@@ -35,9 +35,10 @@
                     <?php foreach($participants as $p) { ?>
                     <div class="col-md-3">
                         <div class="registro-cleanance-wall" style="height: 320px;">
-                            <a href="<?php echo $this->Url->build(['action' => 'visualizar', $p->id]); ?>">
-                            <div class="container-imagem">
-                                <?php echo $this->Html->image("/uploads/participants/" . $p->attachment); ?>
+                            <a href="<?php echo $this->Url->build(['action' => 'visualizar', $p->id]); ?>" class="btn-fancybox">
+                            <div class="container-imagem" style="overflow: hidden;">
+                            <?php $timthumb = $this->Url->build('/vendor/timthumb.php'); ?>
+                                <?php echo $this->Html->image($timthumb . "?w=240&src=" . $this->Url->build('/webroot/uploads/participants/' . $p->attachment_cropped, true)); ?>
                             </div>
                             <div class="pull-left">
                                 <p><?php echo $p->name; ?></p>
@@ -45,7 +46,7 @@
 
                             <div class="pull-right">
                                 <p class="etc">
-                                <i class="fa fa-heart-o"></i> <?php echo $p->likes; ?> <i class="fa fa-comment-o"></i> <?php echo $p->comments_count; ?>
+                                <i class="fa fa-heart-o"></i> <?php echo $p->likes; ?>
                                 </p>
                             </div>
 

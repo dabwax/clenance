@@ -58,6 +58,9 @@ Router::scope('/', function ($routes) {
     $routes->connect('/linha-completa/proteger', ['controller' => 'Linha', 'action' => 'proteger']);
     $routes->connect('/regulamento', ['controller' => 'Regulamento', 'action' => 'index']);
 
+    // CMS
+    $routes->connect('/cms', ['plugin' => 'Cms', 'controller' => 'Auth', 'action' => 'login']);
+
     /**
      * Connect catchall routes for all controllers.
      *

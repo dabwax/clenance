@@ -154,4 +154,36 @@ class Participant extends Entity
         // Retorna os stickers
         return $files;
     }
+
+/**
+ * Salva os stickers selecionados na posição desejada.
+ *
+ * @param  [type] $data Dados dos stickers: ['stickers' => ['sticker_filename' => 'etc....', 'sticker_width', 'sticker_height', 'sticker_rotatex', 'sticker_rotatey']]
+ * @return [type]       [description]
+ */
+    public function saveStickers($data) {
+
+        require_once WWW_ROOT . 'vendor/wideimage/WideImage.php';
+
+        $stickers = $data['stickers'];
+
+        unset($stickers[0]);
+
+        foreach($stickers as $s) {
+
+            $attachment_cropped = $this->attachment_cropped;
+            $image = \WideImage::load(WWW_ROOT . 'uploads/participants/' . $attachment_cropped);
+
+            $attachment_sticker = str_replace('/clenance/', '/', $s['sticker_filename']);
+            $sticker = \WideImage::load(WWW_ROOT . $attachment_sticker)->resize($s['sticker_width'] - 10, $s['sticker_height'] - 10, 'fill');
+
+            if(!empty($s['sticker_rotatez'])) {
+                $sticker = $sticker->rotate(floatval(rad2deg($s['sticker_rotatez'])));
+            }
+
+            $new = $image->merge($sticker, $s['sticker_rotatex'] + 5, $s['sticker_rotatey'] + 5)->saveToFile(WWW_ROOT . 'uploads/participants/' . $attachment_cropped, 90);
+        } // fim - stickers
+
+        return true;
+    }
 }

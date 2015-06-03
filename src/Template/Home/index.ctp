@@ -42,7 +42,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <img src="img/produtos_penultima_pag.png" class="img-produtos-home animated fadeIn img-responsive" alt="">
+                        <img src="<?php echo $this->Url->build('/img/produtos_penultima_pag.png'); ?>" class="img-produtos-home animated fadeIn img-responsive" alt="">
                     </div>
                 </div>
 
