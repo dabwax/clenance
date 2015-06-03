@@ -9,6 +9,22 @@ use Cake\ORM\TableRegistry;
 class AuthController extends AppController
 {
 
+    public function logout()
+    {
+        $user = $this->session->read("user");
+
+        // Se o usuário já estiver logado
+        if(!empty($user)) {
+            $this->Flash->success("Você foi deslogado(a) com sucesso!");
+
+            $this->session->delete("user");
+        } else {
+            $this->Flash->error("Você não encontra-se logado no momento.");
+        }
+
+        return $this->redirect(['action' => 'login']);
+    }
+
     public function login()
     {
         $this->layout = "login";

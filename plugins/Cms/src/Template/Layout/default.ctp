@@ -95,7 +95,7 @@
                     <div class="col-md-12">
 
                         <h1 class="titulo-painel">Painel de Controle <small>
-                            </small></h1>
+                           <?php echo $user->email; ?> </small></h1>
 
                         <hr>
 
@@ -110,26 +110,26 @@
 
                         <ul class="lista-sidebar">
                             <li>
-                                <a href="<?php echo $this->Url->build( array('admin' => true, 'plugin' => false, 'controller' => 'admin', 'action' => 'users') ); ?>"> <i class="fa fa-user"></i> Listar Usuários</a>
+                                <a href="<?php echo $this->Url->build( ['controller' => 'users', 'action' => 'index'] ); ?>"> <i class="fa fa-user"></i> Listar Usuários</a>
                             </li>
                             <li>
-                                <a href="<?php echo $this->Url->build( array('admin' => true, 'plugin' => false, 'controller' => 'admin', 'action' => 'add_user') ); ?>"><i class="fa fa-user-plus"></i> Adicionar Usuário</a>
+                                <a href="<?php echo $this->Url->build( ['controller' => 'users', 'action' => 'add'] ); ?>"><i class="fa fa-user-plus"></i> Adicionar Usuário</a>
                             </li>
                             <li>
-                                <a href=""><i class="fa fa-sign-out"></i> Sair</a>
+                                <a href="<?php echo $this->Url->build( ['controller' => 'auth', 'action' => 'logout'] ); ?>"><i class="fa fa-sign-out"></i> Sair</a>
                             </li>
                         </ul>
                         <h2 class="subtitulo-painel">Cadastro de Participantes</h2>
 
                         <ul class="lista-sidebar">
                             <li>
-                                <a href="<?php echo $this->Url->build( array('admin' => true, 'plugin' => false, 'controller' => 'admin', 'action' => 'promotions') ); ?>"> <i class="fa fa-pencil-square-o"></i> Listar Participantes</a>
+                                <a href="<?php echo $this->Url->build( ['controller' => 'participants', 'action' => 'index'] ); ?>"> <i class="fa fa-pencil-square-o"></i> Listar Participantes</a>
                             </li>
                             <li>
-                                <a href="<?php echo $this->Url->build( array('admin' => true, 'plugin' => false, 'controller' => 'admin', 'action' => 'add_promotion') ); ?>"> <i class="fa fa-plus-square"></i> Aprovar do Instagram</a>
+                                <a href="<?php echo $this->Url->build( ['controller' => 'participants', 'action' => 'instagram'] ); ?>"> <i class="fa fa-plus-square"></i> Aprovar do Instagram</a>
                             </li>
                             <li>
-                                <a href="<?php echo $this->Url->build( array('admin' => true, 'plugin' => false, 'controller' => 'admin', 'action' => 'clients') ); ?>"><i class="fa fa-folder"></i> Exportar Participantes</a>
+                                <a href="<?php echo $this->Url->build( ['controller' => 'participants', 'action' => 'export'] ); ?>"><i class="fa fa-folder"></i> Exportar Participantes</a>
                             </li>
                         </ul>
                     </div>
