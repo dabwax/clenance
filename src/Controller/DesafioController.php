@@ -176,7 +176,7 @@ class DesafioController extends AppController
         $participantsTable = TableRegistry::get('Participants');
         $participant = $participantsTable->get($participant['id']);
 
-        $participant->approved = 1;
+        $participant->approved = 0;
 
         $participantsTable->save($participant);
 

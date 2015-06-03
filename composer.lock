@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3cffd0602d20fde376c6856e967c475e",
+    "hash": "2e5da3ba73b0b2082eeb1b723b8b615b",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -135,7 +135,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakemanager/cakephp-utils/zipball/448919983d299254ba2b1f7f6a42845da3cda9e9",
+                "url": "https://api.github.com/repos/cakemanager/cakephp-utils/zipball/19e6ef907e7d2e495c5743e1137edd839dd324ce",
                 "reference": "448919983d299254ba2b1f7f6a42845da3cda9e9",
                 "shasum": ""
             },
@@ -332,6 +332,54 @@
             ],
             "description": "A composer installer for CakePHP 3.0+ plugins.",
             "time": "2015-02-06 02:06:07"
+        },
+        {
+            "name": "cosenary/instagram",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cosenary/Instagram-PHP-API.git",
+                "reference": "05733522928ad2f79b306da4dbc3899a1b620117"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cosenary/Instagram-PHP-API/zipball/05733522928ad2f79b306da4dbc3899a1b620117",
+                "reference": "05733522928ad2f79b306da4dbc3899a1b620117",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MetzWeb\\Instagram\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Metz",
+                    "email": "christian-metz1@gmx.net",
+                    "homepage": "http://metzweb.net"
+                }
+            ],
+            "description": "An easy-to-use PHP Class for accessing Instagram's API.",
+            "homepage": "https://github.com/cosenary/Instagram-PHP-API",
+            "keywords": [
+                "api",
+                "instagram"
+            ],
+            "time": "2015-05-17 13:39:21"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -1132,6 +1180,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "cakemanager/cakephp-utils": 20,
+        "cosenary/instagram": 20,
         "psy/psysh": 0
     },
     "prefer-stable": true,

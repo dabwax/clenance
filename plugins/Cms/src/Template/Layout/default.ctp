@@ -55,6 +55,7 @@
     <?= $this->Html->css('http://fonts.googleapis.com/css?family=Roboto:400,700,300') ?>
     <?= $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css') ?>
     <?= $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker.standalone.min.css') ?>
+    <?= $this->Html->css('//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css') ?>
     <?= $this->Html->css('/cms/css/app.css') ?>
 
     <?= $this->fetch('meta') ?>
@@ -69,6 +70,7 @@
     <?= $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js') ?>
     <?= $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.min.js') ?>
     <?= $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/locales/bootstrap-datepicker.pt-BR.min.js') ?>
+    <?= $this->Html->script('//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js') ?>
     <?= $this->Html->script('/cms/js/app.js') ?>
 
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">

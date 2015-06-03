@@ -10,7 +10,8 @@
         "mobiledetect/mobiledetectlib": "2.*",
         "cakephp/migrations": "~1.0",
         "cakephp/plugin-installer": "*",
-        "cakemanager/cakephp-utils": "1.0.x-dev"
+        "cakemanager/cakephp-utils": "1.0.x-dev",
+        "cosenary/instagram": "^2.4@dev"
     },
     "require-dev": {
         "psy/psysh": "@stable",
