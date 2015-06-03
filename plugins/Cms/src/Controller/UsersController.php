@@ -18,7 +18,32 @@ class UsersController extends AppController
         $this->set(compact("query"));
     }
 
-    public function edit($id = null)
+    public function add()
+    {
+        $user = $this->Users->newEntity();
+
+        if ($this->request->is('post')) {
+
+            if(!empty($this->request->data['password'])) {
+                $this->request->data['password'] = md5($this->request->data['password']);
+            } else {
+                unset($this->request->data['password']);
+            }
+
+            $user = $this->Users->patchEntity($user, $this->request->data);
+
+            if ($this->Users->save($user)) {
+                $this->Flash->success('O usuário foi gerado.');
+                return $this->redirect(['action' => 'index']);
+            }
+
+            $this->Flash->error('Não foi possível gerar o usuário.');
+        }
+
+        $this->set('user', $user);
+    }
+
+    public function edit($id)
     {
         $query = $this->Users->get($id);
 
@@ -44,5 +69,15 @@ class UsersController extends AppController
         }
 
         $this->set(compact("query"));
+    }
+
+    public function delete($id)
+    {
+        $user = $this->Users->get($id);
+        if ($this->Users->delete($user)) {
+            $this->Flash->success('O usuário foi removido.');
+
+            return $this->redirect(['action' => 'index']);
+        }
     }
 }
