@@ -14,7 +14,7 @@ class ParticipantsController extends AppController
     public function instagram()
     {
         $instagram = new Instagram('25b61709b0464997bde34d1757901d56');
-        $tag = "avene";
+        $tag = "euamocleanance";
         $media = $instagram->getTagMedia($tag);
         $limit = 5;
         $size = 128;

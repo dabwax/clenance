@@ -56,7 +56,7 @@
                     <strong class="titulo-azul">Modo de Uso</strong>
 
                     <p>
-                        Massagear e enxaguar abundamente. <br>
+                        Massagear e enxaguar abundantemente. <br>
                         ESPUMA DELICADA E CREMOSA
                     </p>
                 </div> <!-- .conteudo-tooltip -->
@@ -105,7 +105,6 @@
                         <h1 class="titulo-marca animated fadeInUp">Cleanance</h1>
                         <h3 class="subtitulo-marca animated fadeInUp">Gel de limpeza</h3>
                     </div> <!-- .nome-produto -->
-                    <?php echo $this->Html->image("selo-cleanance.png", ['class' => 'pull-right']); ?>
 
                     <div class="clearfix"></div>
 

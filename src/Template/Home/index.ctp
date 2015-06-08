@@ -52,7 +52,7 @@
                 <div class="col-bem-vindo">
                     <p class="animated fadeIn">Estamos comemorando a chegada de novos produtos da linha Cleanance com o grande desafio de fotos:</p>
 
-                    <img src="img/eu-amo-clenance.jpg" alt="Eu Amo Cleanance" class="img-responsive img-eu-amo-clenance animated fadeIn">
+                    <img src="<?php echo $this->Url->build('/img/eu-amo-clenance.jpg'); ?>" alt="Eu Amo Cleanance" class="img-responsive img-eu-amo-clenance animated fadeIn">
 
                     <p class="animated fadeIn">Compartilhe seus momentos incríveis com a gente. Para participar é fácil:</p>
 
@@ -60,14 +60,14 @@
 
                         <div class="col-xs-12 col-md-12 col-lg-6">
                             <div class="bola-icone bola-icone-1 animated fadeIn">
-                                <img src="img/icone-home-1.jpg" alt="">
+                                <img src="<?php echo $this->Url->build('/img/icone-home-1.jpg'); ?>" alt="">
                                 <p class="p-icone">Declare e compartilhe <br> seu amor pela linha Cleanance <br> com a gente!</p>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-md-12 col-lg-6">
                             <div class="bola-icone bola-icone-2 animated fadeIn">
-                                <img src="img/icone-home-2.jpg" alt="">
+                                <img src="<?php echo $this->Url->build('/img/icone-home-2.jpg'); ?>" alt="">
                                 <p class="p-icone">Os 5 melhores <br> momentos especiais <br> ganharão um kit com <br> produtos Cleanance.</p>
                             </div>
                         </div>

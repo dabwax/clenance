@@ -34,17 +34,20 @@
 
                     <?php foreach($participants as $p) { ?>
                     <div class="col-md-3">
-                        <div class="registro-cleanance-wall" style="height: 320px;">
+                        <div class="registro-cleanance-wall" style="height: 340px;">
                             <a href="<?php echo $this->Url->build(['action' => 'visualizar', $p->id]); ?>" class="btn-fancybox">
                             <div class="container-imagem" style="overflow: hidden;">
                             <?php $timthumb = $this->Url->build('/vendor/timthumb.php'); ?>
                                 <?php echo $this->Html->image($timthumb . "?w=240&src=" . $this->Url->build('/webroot/uploads/participants/' . $p->attachment_cropped, true)); ?>
                             </div>
-                            <div class="pull-left">
-                                <p><?php echo $p->name; ?></p>
+                            <div class="pull-left" style="width: 80%;">
+                                <p style="word-wrap: break-word;"><?php echo $p->name; ?></p>
+                                <?php if(!empty($p->slug)) : ?>
+                                <p style="font-size: 12px;">@<?php echo (!empty($p->slug)) ? $p->slug : ''; ?></p>
+                            <?php endif; ?>
                             </div>
 
-                            <div class="pull-right">
+                            <div class="pull-right" style="width: 20%; text-align: right;">
                                 <p class="etc">
                                 <i class="fa fa-heart-o"></i> <?php echo $p->likes; ?>
                                 </p>

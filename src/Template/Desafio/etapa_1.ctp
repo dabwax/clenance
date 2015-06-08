@@ -12,7 +12,7 @@
         <div class="col-xs-12 col-sm-12">
             <div class="col-bem-vindo">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-lg-5">
+                    <div class="col-xs-12 col-sm-12 col-lg-5" style="padding-bottom: 40px;">
                         <?php echo $this->Html->image("eu-amo-clenance.jpg", ['class' => 'img-responsive', 'style' => 'margin: 0 auto;']); ?>
 
                         <div class="clearfix"></div>
