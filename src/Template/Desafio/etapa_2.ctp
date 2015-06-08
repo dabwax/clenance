@@ -27,7 +27,7 @@
                             <li class="">3</li>
                         </ul>
 
-                        <p class="col-lg-9">Selecione quantos stickers quiser:</p>
+                        <p class="col-lg-9">Selecione quantos stickers quiser</p>
 
                         <div class="clearfix"></div>
 
@@ -75,7 +75,7 @@
 
 <script id="stickerImgTmpl" type="text/x-jsrender">
 {{for dados}}
-<div class="container-sticker-{{:i}} container-sticker" style="z-index: {{:i}}; width: {{:width}}px; height: {{:height}}px; display: none;">
+<div class="container-sticker-{{:i}} container-sticker" style="z-index: {{:i+1}}; width: {{:width}}px; height: {{:height}}px; display: none;">
     <a href="javascript:;" class="btn-remover-sticker" data-i="{{:i}}"></a>
     <img src="{{:filename}}" width="{{:width}}" height="{{:height}}" class="rotacionar-imagem sticker-{{:i}} img-sticker" />
 </div>

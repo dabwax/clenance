@@ -58,13 +58,14 @@ $(document).ready(function() {
                     console.log(ui);
                     $(".sticker-" + i + "-rotatez").val(ui.angle.current);
                 }
-            }).draggable({
-                containment: $(".container-imagem-etapa2"),
+            });
 
-                stop: function(event, ui){
-                    $(".sticker-" + i + "-rotatex").val(ui.position.left);
-                    $(".sticker-" + i + "-rotatey").val(ui.position.top);
-                }
+            $(".container-sticker-" + i).draggableTouch()
+            .bind("dragstart", function(event, pos) {
+            })
+            .bind("dragend", function(event, pos) {
+                    $(".sticker-" + i + "-rotatex").val(pos.left);
+                    $(".sticker-" + i + "-rotatey").val(pos.top);
             });
         }
 
@@ -104,7 +105,7 @@ $(document).ready(function() {
 
             $(this).parent().fadeOut(500);
 
-            stickersFila = jQuery.grep(stickersFila, function(value) {
+            var stickersFila = jQuery.grep(stickersFila, function(value) {
               return value.i != i;
             });
 
@@ -118,6 +119,7 @@ $(document).ready(function() {
             $(".sticker-" + i + "-rotatex").remove();
             $(".sticker-" + i + "-rotatey").remove();
             $(".sticker-" + i + "-rotatez").remove();
+            $(".container-sticker-" + i).remove();
         });
 
         // Evento de clique no sticker

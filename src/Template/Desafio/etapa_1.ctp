@@ -23,45 +23,45 @@
                             <li class="">3</li>
                         </ul>
 
-                        <p class="col-lg-9">Inclua um dos filtros que deixarão seu momento ainda mais especial:</p>
+                        <p class="col-lg-9">Inclua um dos filtros que deixarão seu momento ainda mais especial</p>
 
                         <div class="clearfix"></div>
 
                         <ul id="filters">
                             <li>
                                 <a href="javascript:;" class="btn-efeito" data-efeito="efeito1">
-                                    <?php echo $this->Html->image('/uploads/participants/efeito1_' . $participant['attachment'], ['style' => 'width: 100%; height: 150px;', 'class' => 'img-pequena']); ?>
-                                    <span>Gotham </span>
-                                </a>
+                                    <?php echo $this->Html->image('/uploads/participants/efeito1_' . $participant['attachment'], ['style' => 'width: 100%; height: 180px;', 'class' => 'img-pequena']); ?>
+                                    <!--<span>Gotham </span>
+-->                                </a>
                             </li>
                             <li>
                                 <a href="javascript:;" class="btn-efeito" data-efeito="efeito2">
-                                    <?php echo $this->Html->image('/uploads/participants/efeito2_' . $participant['attachment'], ['style' => 'width: 100%; height: 150px;', 'class' => 'img-pequena']); ?>
-                                    <span>Nashville </span>
-                                </a>
+                                    <?php echo $this->Html->image('/uploads/participants/efeito2_' . $participant['attachment'], ['style' => 'width: 100%; height: 180px;', 'class' => 'img-pequena']); ?>
+                                    <!--<span>Nashville </span>
+-->                                </a>
                             </li>
                             <li>
                                 <a href="javascript:;" class="btn-efeito" data-efeito="efeito3">
-                                    <?php echo $this->Html->image('/uploads/participants/efeito3_' . $participant['attachment'], ['style' => 'width: 100%; height: 150px;', 'class' => 'img-pequena']); ?>
-                                    <span>Lomo </span>
-                                </a>
+                                    <?php echo $this->Html->image('/uploads/participants/efeito3_' . $participant['attachment'], ['style' => 'width: 100%; height: 180px;', 'class' => 'img-pequena']); ?>
+                                    <!--<span>Lomo </span>
+-->                                </a>
                             </li>
                             <li>
                                 <a href="javascript:;" class="btn-efeito" data-efeito="efeito4">
-                                    <?php echo $this->Html->image('/uploads/participants/efeito4_' . $participant['attachment'], ['style' => 'width: 100%; height: 150px;', 'class' => 'img-pequena']); ?>
-                                    <span>Kelvin </span>
-                                </a>
+                                    <?php echo $this->Html->image('/uploads/participants/efeito4_' . $participant['attachment'], ['style' => 'width: 100%; height: 180px;', 'class' => 'img-pequena']); ?>
+                                    <!--<span>Kelvin </span>
+-->                                </a>
                             </li>
                             <li>
                                 <a href="javascript:;" class="btn-efeito" data-efeito="efeito5">
-                                    <?php echo $this->Html->image('/uploads/participants/efeito5_' . $participant['attachment'], ['style' => 'width: 100%; height: 150px;', 'class' => 'img-pequena']); ?>
-                                    <span>Toaster </span>
-                                </a>
+                                    <?php echo $this->Html->image('/uploads/participants/efeito5_' . $participant['attachment'], ['style' => 'width: 100%; height: 180px;', 'class' => 'img-pequena']); ?>
+                                    <!--<span>Toaster </span>
+-->                                </a>
                             </li>
                             <li>
                                 <a href="javascript:;" class="btn-efeito" data-efeito="efeito6">
-                                    <?php echo $this->Html->image('/uploads/participants/efeito6_' . $participant['attachment'], ['style' => 'width: 100%; height: 150px;', 'class' => 'img-pequena']); ?>
-                                    <span>Tilt Shift </span>
+                                    <?php echo $this->Html->image('/uploads/participants/efeito6_' . $participant['attachment'], ['style' => 'width: 100%; height: 180px;', 'class' => 'img-pequena']); ?>
+                                    <!--<span>Tilt Shift </span>-->
                                 </a>
                             </li>
                         </ul>

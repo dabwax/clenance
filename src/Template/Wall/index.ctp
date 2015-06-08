@@ -16,7 +16,7 @@
 
                 <div class="col-lg-7 col-md-6">
                     <p style="font-size: 14px;">Olhe quem já compartilhou o seu momento incrível com Cleanance. <br>
-                    Envie também sua foto ou compartilhe no seu Instagram usando <span style="color: #0099A8;">#EuAmoCleanance</span>.</p>
+                    Envie também a sua foto ou compartilhe no seu Instagram usando <span style="color: #0099A8;">#EuAmoCleanance</span>.</p>
                 </div> <!-- .col-lg-6 -->
 
                 <div class="col-lg-3 col-md-4" style="padding-top: 20px;">

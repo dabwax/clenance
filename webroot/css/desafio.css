@@ -58,7 +58,7 @@ padding: 0px;
     display: inline-block;
     width: 48%;
     margin-left: 1%;
-    height: 70px;
+    height: 170px;
     text-align: center;
     font-size: 16px;
     font-family: 'CenturyGothic';
@@ -89,6 +89,7 @@ padding: 0px;
     display: inline;
     width: 500px;
     position: relative;
+    overflow: hidden;
 }
 .container-sticker {
     position: absolute !important;
@@ -192,5 +193,8 @@ padding: 0px;
     width: 49%;
     height: 150px;
     text-align: center;
-
+}
+.container-imagem-etapa2 .img-responsive {
+    position: relative;
+    z-index: 1;
 }

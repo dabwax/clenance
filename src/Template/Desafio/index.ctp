@@ -24,7 +24,7 @@
                                 <?php echo $this->Form->input("attachment", ['class' => 'form-control required', 'label' => false, 'div' => false, 'type' => 'file']); ?>
                             </div>
                             <div class="form-group campo-newsletter">
-                                <label class="checkbox">
+                                <label class="checkbox" style="font-size: 12px;">
                                     <?php echo $this->Form->input("newsletter", ['type' => 'checkbox', 'label' => false]  ); ?> Aceito receber informações de Eau Thermale Avène.
                                 </label>
                             </div>
@@ -59,8 +59,8 @@
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 
                                 <div class="form-group campo-termos-de-uso">
-                                    <label class="checkbox" style="margin-top: 40px;">
-                                        <?php echo $this->Form->input("tos", ['type' => 'checkbox', 'label' => false, 'required' => true]  ); ?> Li e aceito os termos da promoção
+                                    <label class="checkbox" style="margin-top: 18px;">
+                                        <?php echo $this->Form->input("tos", ['type' => 'checkbox', 'label' => false, 'required' => true]  ); ?> Li e aceito os termos da promoção.
                                     </label>
                                 </div>
 

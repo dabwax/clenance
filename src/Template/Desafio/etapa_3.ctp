@@ -17,7 +17,7 @@
                             <li class="atual">3</li>
                         </ul>
 
-                        <p class="col-lg-9">Finalize e publique sua foto.</p>
+                        <p class="col-lg-9"></p>
 
                         <ul class="lista-final">
                             <li>

@@ -1,6 +1,7 @@
 .formulario input[type="text"] {
     background: transparent !important;
     border: 2px solid #0099A8;
+    border-radius: 0px !important;
 }
 ::-webkit-input-placeholder {
    color: #0099A8 !important;
@@ -25,7 +26,7 @@
 .formulario label.checkbox {
     font-weight: normal;
    font-family: 'CenturyGothic';
-   font-size: 12px;
+   font-size: 13px;
    padding-left: 16px;
 }
 .formulario label.checkbox input {
