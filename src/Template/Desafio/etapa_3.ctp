@@ -35,7 +35,7 @@
 
                     </div> <!-- lateral -->
 
-                    <div class="principal col-lg-7 text-center">
+                    <div class="principal col-lg-7 col-xs-12 col-sm-12 text-center">
 
                         <div class="container-imagem-etapa2">
                             <?php

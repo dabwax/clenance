@@ -28,9 +28,11 @@
                             <span class="coracao-3 pulse2"></span>
                         </span>
 
-                        <span class="coracoes-3">
-                            <p>Conheça os <br> lançamentos de <br> <strong>Cleanance</strong></p>
-                        </span>
+                            <span class="coracoes-3">
+                                <a href="<?php echo $this->Url->build(['controller' =>'linha', 'action' => 'index']); ?>" style="width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; z-index: 999; text-decoration: none;">
+                                    <p>Conheça os <br> lançamentos de <br> <strong>Cleanance</strong></p>
+                                </a>
+                            </span>
 
                         <div class="clearfix"></div>
                     </div>

@@ -31,7 +31,7 @@
 
                         <div class="clearfix"></div>
 
-                        <ul>
+                        <ul class="ul-stickers">
                             <?php foreach($stickers as $s) : ?>
                             <li>
                                 <a href="#" class="btn-sticker">
@@ -49,7 +49,7 @@
 
                     </div> <!-- lateral -->
 
-                    <div class="principal col-lg-7 text-center">
+                    <div class="principal col-lg-7 col-xs-12 col-sm-12 text-center">
 
                         <div class="container-imagem-etapa2">
                             <?php

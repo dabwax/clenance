@@ -68,7 +68,7 @@
 
                     </div> <!-- lateral -->
 
-                    <div class="principal col-lg-7 text-center">
+                    <div class="principal col-lg-7 col-xs-12 col-sm-12 text-center">
 
                             <?php echo $this->Html->image('/uploads/participants/' . $participant['attachment'], ['style' => '', 'class' => 'crop_me']); ?>
 

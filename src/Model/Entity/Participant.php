@@ -172,16 +172,25 @@ class Participant extends Entity
         foreach($stickers as $s) {
 
             $attachment_cropped = $this->attachment_cropped;
-            $image = \WideImage::load(WWW_ROOT . 'uploads/participants/' . $attachment_cropped);
+            $image = \WideImage::loadFromFile(WWW_ROOT . 'uploads' . DS . 'participants' . DS . $attachment_cropped);
 
             $attachment_sticker = str_replace('/clenance/', '/', $s['sticker_filename']);
-            $sticker = \WideImage::load(WWW_ROOT . $attachment_sticker)->resize($s['sticker_width'] - 10, $s['sticker_height'] - 10, 'fill');
+            $sticker = \WideImage::loadFromFile(WWW_ROOT . $attachment_sticker)->resize($s['sticker_width'] - 10, $s['sticker_height'] - 10, 'fill');
 
             if(!empty($s['sticker_rotatez'])) {
                 $sticker = $sticker->rotate(floatval(rad2deg($s['sticker_rotatez'])));
             }
 
-            $new = $image->merge($sticker, $s['sticker_rotatex'] + 5, $s['sticker_rotatey'] + 5)->saveToFile(WWW_ROOT . 'uploads/participants/' . $attachment_cropped, 90);
+            $explode = explode(".", $attachment_cropped);
+            $ext = end($explode);
+
+            if(strtolower($ext) == "png") {
+                $quality = 9;
+            } else {
+                $quality = 90;
+            }
+
+            $new = $image->merge($sticker, $s['sticker_rotatex'] + 5, $s['sticker_rotatey'] + 5)->saveToFile(WWW_ROOT . 'uploads/participants/' . $attachment_cropped, $quality);
         } // fim - stickers
 
         return true;

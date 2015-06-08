@@ -9,7 +9,7 @@
                     <div class="col-xs-12 col-sm-12 col-lg-4">
                         <img src="img/eu-amo-clenance.jpg" class="img-responsive" style="margin: 0 auto;" alt="">
 
-                        <p>Preencha o formulário abaixo:</p>
+                        <p>Preencha o formulário abaixo</p>
 
                             <div class="form-group">
                                 <?php echo $this->Form->input("name", ['placeholder' => 'Nome', 'class' => 'form-control required', 'label' => false, 'div' => false]); ?>
@@ -30,7 +30,7 @@
                             </div>
                     </div>
 
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 col-xs-12 col-sm-12">
                         <div class="regulamento2">
 
                             <div class="regulamento-container">

@@ -183,3 +183,14 @@ padding: 0px;
 .lista-final li a:hover {
     opacity: 0.5 !important;
 }
+.ul-stickers {
+    margin: 0px;
+    padding: 0px;
+}
+.ul-stickers li {
+    display: inline-block;
+    width: 49%;
+    height: 150px;
+    text-align: center;
+
+}

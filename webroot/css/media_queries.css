@@ -5,6 +5,9 @@
     .clearfix-on-mobile {
         clear: both;
     }
+    .jwc_frame {
+        width: 100% !important;
+    }
 }
 @media (max-width: 480px) {
 .coracoes-3 {

@@ -23,6 +23,7 @@ module.exports = function(grunt) {
                     'webroot/vendor/notify.min.js',
                     'webroot/js/jquery.easing.1.3.js',
                     'webroot/js/desafio_stickers.js',
+                    'webroot/js/jquery.ui.touch-punch.min.js',
                     ]
               }
             }
