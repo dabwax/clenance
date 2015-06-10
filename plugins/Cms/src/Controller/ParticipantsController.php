@@ -11,6 +11,27 @@ use MetzWeb\Instagram\Instagram;
 class ParticipantsController extends AppController
 {
 
+    public function export()
+    {
+        $this->autoRender = false;
+
+        $participants = TableRegistry::get('Participants');
+
+        $query = $participants->find()->all();
+
+        $tmp[] = array('id', 'nome', 'instagram', 'email', 'telefone', 'newsletter', 'anexo', 'likes', 'aprovado', 'data de criação');
+
+        foreach($query as $p) {
+            $tmp[] = array($p->id, $p->name, $p->slug, $p->email, $p->phone, $p->newsletter, $p->attachment_cropped, $p->likes, $p->approved, $p->created);
+        }
+
+        require_once WWW_ROOT . "vendor" . DS .  "parsecsv-0.3.2" . DS . "parsecsv.lib.php";
+
+        $csv = new \parseCSV();
+        $csv->output (true, 'participantes-cleanance.csv', $tmp);
+
+    }
+
     public function instagram()
     {
         $instagram = new Instagram('25b61709b0464997bde34d1757901d56');

@@ -37,6 +37,20 @@ class AppController extends Controller
     public function initialize()
     {
         parent::initialize();
+
+        // Carrega o Mobile Detect
+        require_once WWW_ROOT . 'vendor' . DS . 'Mobile-Detect' . DS . 'Mobile_Detect.php';
+
+        $detect = new \Mobile_Detect;
+
+        if( $detect->isMobile() || $detect->isTablet() ){
+            $is_mobile = "true";
+        } else {
+            $is_mobile = "false";
+        }
+
+        $this->set(compact("is_mobile"));
+
         $this->loadComponent('Flash');
     }
 }

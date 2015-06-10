@@ -72,7 +72,7 @@
     <?= $this->Html->script('app.min.js') ?>
 </head>
 
-<body class="<?php echo strtolower($this->request->params['controller']); ?> <?php echo strtolower($this->request->params['controller']); ?>-<?php echo strtolower($this->request->params['action']); ?>">
+<body data-is-mobile="<?php echo $is_mobile; ?>" class="<?php echo strtolower($this->request->params['controller']); ?> <?php echo strtolower($this->request->params['controller']); ?>-<?php echo strtolower($this->request->params['action']); ?>">
 
 <div class="page-wrap">
 

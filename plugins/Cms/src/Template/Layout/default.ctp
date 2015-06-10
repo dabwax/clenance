@@ -134,6 +134,13 @@
                                 <a href="<?php echo $this->Url->build( ['controller' => 'participants', 'action' => 'export'] ); ?>"><i class="fa fa-folder"></i> Exportar Participantes</a>
                             </li>
                         </ul>
+                        <h2 class="subtitulo-painel">Estatísticas</h2>
+
+                        <ul class="lista-sidebar">
+                            <li>
+                                <a href="<?php echo $this->Url->build( ['controller' => 'statistics', 'action' => 'index'] ); ?>"> <i class="fa fa-pencil-square-o"></i> Visualizar</a>
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="col-md-9">

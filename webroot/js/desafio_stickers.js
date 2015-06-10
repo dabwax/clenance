@@ -60,13 +60,26 @@ $(document).ready(function() {
                 }
             });
 
-            $(".container-sticker-" + i).draggableTouch()
-            .bind("dragstart", function(event, pos) {
-            })
-            .bind("dragend", function(event, pos) {
-                    $(".sticker-" + i + "-rotatex").val(pos.left);
-                    $(".sticker-" + i + "-rotatey").val(pos.top);
-            });
+            var is_mobile = $("body").data("is-mobile");
+
+            if(is_mobile == false) {
+                $(".container-sticker-" + i).draggable({
+                    containment: $(".container-imagem-etapa2"),
+
+                    stop: function(event, ui){
+                        $(".sticker-" + i + "-rotatex").val(ui.position.left);
+                        $(".sticker-" + i + "-rotatey").val(ui.position.top);
+                    }
+                });
+            } else if(is_mobile == true) {
+                 $(".container-sticker-" + i).draggableTouch()
+                .bind("dragend", function(event, pos) {
+                        $(".sticker-" + i + "-rotatex").val(pos.left);
+                        $(".sticker-" + i + "-rotatey").val(pos.top);
+                });
+            }
+
+
         }
 
         function adicionarCampo(campo, total, i, dados) {

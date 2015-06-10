@@ -48,13 +48,38 @@ class WallController extends AppController
         $this->set(compact("query", "participants", "p"));
 
         if($this->request->is("post")) {
-            $p = $participantsTable->get($id);
+            // 0 - recuperar ip do usuário
+            $ip_address = $_SERVER['REMOTE_ADDR'];
 
-            $p->likes = $p->likes + 1;
+            // 1 - buscar um registro em participant_likes que o participant_id = $id e ip_address = ip do usuário
+            $where = [
+                'ip_address' => $ip_address,
+                'participant_id' => $id
+            ];
 
-            $participantsTable->save($p);
+            $participantLikesTable = TableRegistry::get("ParticipantLikes");
+            $tmp = $participantLikesTable->find()->where($where)->first();
 
-            $this->Flash->success("O seu voto foi computado com sucesso!");
+            // 2 - se a busca retornar vazia, incluir o novo registro de participant_like e dar success
+            if(empty($tmp)) {
+                $like = $participantLikesTable->newEntity();
+
+                $like->ip_address = $ip_address;
+                $like->participant_id = $id;
+
+                $participantLikesTable->save($like);
+
+                $p->likes = $p->likes + 1;
+
+                $participantsTable->save($p);
+
+                $this->Flash->success("O seu voto foi computado com sucesso!");
+            }
+
+            // 3 - se a busca retornar preenchida, dar error apenas
+            if(!empty($tmp)) {
+                $this->Flash->error("Você já votou para este participante!");
+            }
 
             return $this->redirect(['action' => 'visualizar', $id]);
         }

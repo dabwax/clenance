@@ -20,6 +20,11 @@ class DesafioController extends AppController
  */
     public function index()
     {
+
+    }
+
+    public function index2()
+    {
         // Carrega os models necessários
         $this->loadModel("Participant");
 
