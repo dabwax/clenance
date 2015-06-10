@@ -1,3 +1,6 @@
+body.linha {
+    background-position: 0px -56px;
+}
 .bolinhas {
     display: inline-block;
     width: 100%;
@@ -92,7 +95,7 @@ border-radius: 16px;
     background: url("../img/bolinha_sinalizadora.png") no-repeat !important;
 }
 .conteudo-tooltip {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     padding: 6px;
     position: absolute;
     z-index: 100;
@@ -194,8 +197,8 @@ border-radius: 16px;
 }
 .tooltip-higienizar-4 {
     position: absolute;
-    right: 225px;
-    top: 290px;
+    right: 307px;
+    top: 300px;
 }
 .tooltip-higienizar-4 .conteudo-tooltip {
     width: 450px;
@@ -205,15 +208,15 @@ border-radius: 16px;
 .tooltip-higienizar-4 .tracejado {
     position: absolute;
     left: 14px;
-    top: -30px;
+    top: -80px;
     width: 2px;
-    height: 31px;
+    height: 81px;
     border-left: 1px dashed #666;
 }
 .tooltip-higienizar-5 {
     position: absolute;
-    right: 0px;
-    top: 250px;
+    right: 17px;
+    top: 345px;
 }
 .tooltip-higienizar-5 .conteudo-tooltip {
     width: 450px;
@@ -230,13 +233,13 @@ border-radius: 16px;
 }
 .tooltip-higienizar-6 {
     position: absolute;
-    left: 298px;
+    left: 228px;
     top: 310px;
 }
 .tooltip-higienizar-6 .conteudo-tooltip {
     width: 450px;
     right: 0px;
-    top: -240px;
+    top: -292px;
 }
 .tooltip-higienizar-6 .tracejado {
     position: absolute;
@@ -248,13 +251,13 @@ border-radius: 16px;
 }
 .tooltip-higienizar-7 {
     position: absolute;
-    left: 578px;
+    left: 540px;
     top: 310px;
 }
 .tooltip-higienizar-7 .conteudo-tooltip {
     width: 450px;
     right: 0px;
-    top: -240px;
+    top: -269px;
 }
 .tooltip-higienizar-7 .tracejado {
     position: absolute;
@@ -266,20 +269,20 @@ border-radius: 16px;
 }
 .tooltip-higienizar-8 {
     position: absolute;
-    right: 10px;
+    right: 21px;
     top: 310px;
 }
 .tooltip-higienizar-8 .conteudo-tooltip {
     width: 450px;
     right: 0px;
-    top: -240px;
+    top: -202px;
 }
 .tooltip-higienizar-8 .tracejado {
     position: absolute;
     left: 14px;
-    top: -30px;
+    top: -67px;
     width: 2px;
-    height: 31px;
+    height: 68px;
     border-left: 1px dashed #666;
 }
 .laranja .titulo-marca {
@@ -287,4 +290,20 @@ border-radius: 16px;
 }
 .laranja .subtitulo-marca {
     color: #EA6F0C;
+}
+.legenda-1 {
+    position: absolute;
+    left: 120px;
+    bottom: 55px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #0099A8;
+}
+.legenda-2 {
+    position: absolute;
+    right: 210px;
+    bottom: 55px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #0099A8;
 }

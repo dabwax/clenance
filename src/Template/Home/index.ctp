@@ -60,14 +60,14 @@
 
                     <div class="row">
 
-                        <div class="col-xs-12 col-md-12 col-lg-6">
+                        <div class="col-xs-6 col-md-6 col-lg-6">
                             <div class="bola-icone bola-icone-1 animated fadeIn">
                                 <img src="<?php echo $this->Url->build('/img/icone-home-1.jpg'); ?>" alt="">
                                 <p class="p-icone">Declare e compartilhe <br> seu amor pela linha Cleanance <br> com a gente!</p>
                             </div>
                         </div>
 
-                        <div class="col-xs-12 col-md-12 col-lg-6">
+                        <div class="col-xs-6 col-md-6 col-lg-6">
                             <div class="bola-icone bola-icone-2 animated fadeIn">
                                 <img src="<?php echo $this->Url->build('/img/icone-home-2.jpg'); ?>" alt="">
                                 <p class="p-icone">Os 5 melhores <br> momentos especiais <br> ganharão um kit com <br> produtos Cleanance.</p>

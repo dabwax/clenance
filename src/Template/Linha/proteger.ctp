@@ -20,7 +20,7 @@
                     <?php echo $this->Html->image("bonequinha.png"); ?>
                     <strong>Dica do Dermatologista</strong>
                 </h2>
-                <div class="box-branco">
+                <div class="box-branco text-justify">
                     <p>Os efeitos da radiação UV, tanto UVA quanto UVB, já são bem conhecidos de todos nós. Eles podem variar de uma queimadura ao câncer de pele.</p>
 
                     <p>Ao escolher um filtro solar deve-se levar em consideração a fórmula mais adequada ao seu tipo de pele, além do fator de proteção solar (FPS), idealmente acima de 30 em nosso território. Peles mais fotossensíveis ou em tratamento cosmético podem necessitar de um FPS mais alto.</p>
@@ -42,8 +42,8 @@
                 <div class="conteudo-tooltip animated fadeInDown hide">
                     <a href="#" class="btn"><i class="fa fa-times"></i></a>
                     <div class="nome-produto laranja">
-                        <h1 class="titulo-marca animated fadeInUp">Avène Solar Toque Seco</h1>
-                        <h3 class="subtitulo-marca animated fadeInUp">FPS 30 e FPS 50+</h3>
+                        <h1 class="titulo-marca animated fadeInUp" style="font-size: 24px; font-weight: bold;">Avène Solar Toque Seco</h1>
+                        <h3 class="subtitulo-marca animated fadeInUp" style="font-size: 22px; margin-bottom: 10px;">FPS 30 e FPS 50+</h3>
                     </div> <!-- .nome-produto -->
 
                     <div class="clearfix"></div>
@@ -51,12 +51,12 @@
                     <strong class="titulo-azul">Benefícios</strong>
 
                     <p>
-                        Ampla proteção UVB e UVA <br>
+                        Ampla proteção UVB e <span style="padding: 4px; border: 1px solid #666; border-radius: 78%;">UVA</span> <br>
                         Tripla ação antibrilho. <br>
-                        <em>Seborregula, seborreduz e matifica.</em>
+                        <em>Seborregula, seborreduz e matifica.</em> <br> <br>
                         Dupla ação antioxidante. <br>
-                        Previne o fotoenvelhecimento. <br>
-                        Combate o fotodano. <br>
+                        <em> Previne o fotoenvelhecimento. <br>
+                        Combate o fotodano. <br></em>
                         <strong>Sem cor</strong> <br>
                         TEXTURA TOQUE SECO <br>
                         Oil-free para pele brasileira.
@@ -73,8 +73,8 @@
                 <div class="conteudo-tooltip animated fadeInDown hide">
                     <a href="#" class="btn"><i class="fa fa-times"></i></a>
                     <div class="nome-produto laranja">
-                        <h1 class="titulo-marca animated fadeInUp">Avène Solar Toque Seco</h1>
-                        <h3 class="subtitulo-marca animated fadeInUp">FPS 30 e FPS 50+</h3>
+                        <h1 class="titulo-marca animated fadeInUp" style="font-size: 24px; font-weight: bold;">Avène Solar Toque Seco</h1>
+                        <h3 class="subtitulo-marca animated fadeInUp" style="font-size: 22px; margin-bottom: 10px;">FPS 30 e FPS 50+</h3>
                     </div> <!-- .nome-produto -->
 
                     <div class="clearfix"></div>
@@ -82,11 +82,13 @@
                     <strong class="titulo-azul">Benefícios</strong>
 
                     <p>
-                        Ampla proteção UVB e UVA <br>
+                        Ampla proteção UVB e <span style="padding: 4px; border: 1px solid #666; border-radius: 78%;">UVA</span> <br>
                         Tripla ação antibrilho. <br>
-                        <em>Seborregula, seborreduz e matifica.</em>
+                        <em>Seborregula, seborreduz e matifica.</em> <br>
+                        <br>
+                        <em>
                         Dupla ação antioxidante. <br>
-                        Previne o fotoenvelhecimento. <br>
+                        Previne o fotoenvelhecimento. <br></em>
                         Combate o fotodano. <br>
                         <strong>Com cor, uniformiza a pele e disfarça as pequenas imperfeições.</strong> <br>
                         TEXTURA TOQUE SECO <br>
@@ -104,7 +106,7 @@
                 <div class="conteudo-tooltip animated fadeInDown hide">
                     <a href="#" class="btn"><i class="fa fa-times"></i></a>
                     <div class="nome-produto">
-                        <h1 class="titulo-marca animated fadeInUp">Cleanance</h1>
+                        <h1 class="titulo-marca animated fadeInUp" style="font-size: 34px;">Cleanance</h1>
                         <h3 class="subtitulo-marca animated fadeInUp">Solar</h3>
                     </div> <!-- .nome-produto -->
 
@@ -117,7 +119,7 @@
                     <strong class="titulo-azul">Benefícios</strong>
 
                     <p>
-                        Ampla proteção UVB e UVA <br>
+                        Ampla proteção UVB e <span style="padding: 4px; border: 1px solid #666; border-radius: 78%;">UVA</span> <br>
                         Nova fórmula antiacne e antioleosidade <br>
                         Antioxidante de longa duração <br>
                         NOVA TEXTURA ULTRA ABSORVENTE
@@ -126,7 +128,7 @@
                 </div> <!-- .conteudo-tooltip -->
             </div> <!-- .tooltip-produto -->
 
-            <?php echo $this->Html->image("produtosLaranja.png", ['class' => 'img-responsive img-linha-cleanance pull-right']); ?>
+            <?php echo $this->Html->image("toque-seco.png", ['class' => 'img-responsive img-linha-cleanance pull-right']); ?>
 
         </div>
 

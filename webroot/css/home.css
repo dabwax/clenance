@@ -70,7 +70,7 @@
     font-size: 13px;
 }
 .btn-participe {
-    margin-top: 30px;
+    margin-top: 10px;
     text-transform: uppercase;
     border: none !important;
     background: #0099A8;
@@ -80,13 +80,11 @@
     border-radius: 0px;
     padding-left: 20px;
     padding-right: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 .btn-participe:hover {
     padding-left: 25px;
     padding-right: 25px;
-    padding-top: 15px;
-    padding-bottom: 15px;
     opacity: 0.7;
     background: #0099A8;
 }
@@ -125,7 +123,7 @@ h2.subtitulo-marca {
 }
 h3.subtitulo-marca {
     font-size: 20px;
-    color: #8D8C8C;
+    color: #0099A8;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     font-weight: 300;

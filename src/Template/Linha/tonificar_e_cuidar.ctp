@@ -20,7 +20,7 @@
                     <?php echo $this->Html->image("bonequinha.png"); ?>
                     <strong>Dica do Dermatologista</strong>
                 </h2>
-                <div class="box-branco">
+                <div class="box-branco text-justify">
                     <p>O objetivo de higienizar diariamente a pele é remover da superfície cutânea impurezas como sebo, suor, descamação e bactérias, além dos resíduos ambientais e cosméticos.</p>
 
                     <p>A higiene deve ser realizada pelo menos duas vezes ao dia, de manhã e a noite. Nas peles oleosas e acneicas o uso de produtos desincrustante duas vezes por semana traz benefícios desde que utilizadas com gentileza!</p>
@@ -38,7 +38,7 @@
                 <div class="conteudo-tooltip animated fadeInDown hide">
                     <a href="#" class="btn"><i class="fa fa-times"></i></a>
                     <div class="nome-produto">
-                        <h1 class="titulo-marca animated fadeInUp">Cleanance</h1>
+                        <h1 class="titulo-marca animated fadeInUp" style="font-size: 34px;">Cleanance</h1>
                         <h3 class="subtitulo-marca animated fadeInUp">Loção matificante</h3>
                     </div> <!-- .nome-produto -->
 
@@ -70,7 +70,7 @@
                 <div class="conteudo-tooltip animated fadeInDown hide">
                     <a href="#" class="btn"><i class="fa fa-times"></i></a>
                     <div class="nome-produto">
-                        <h1 class="titulo-marca animated fadeInUp">Cleanance</h1>
+                        <h1 class="titulo-marca animated fadeInUp" style="font-size: 34px;">Cleanance</h1>
                         <h3 class="subtitulo-marca animated fadeInUp">Emulsão seborreguladora matificante</h3>
                     </div> <!-- .nome-produto -->
 
@@ -91,8 +91,7 @@
                 </div> <!-- .conteudo-tooltip -->
             </div> <!-- .tooltip-produto -->
 
-            <?php echo $this->Html->image("produtos_linha_cleanance_3.png", ['class' => 'img-responsive img-linha-cleanance pull-right']); ?>
-            <?php echo $this->Html->image("produtos_linha_cleanance_2.png", ['class' => 'img-responsive img-linha-cleanance pull-right']); ?>
+            <?php echo $this->Html->image("produtos_2.png", ['class' => 'img-responsive img-linha-cleanance pull-right']); ?>
 
         </div>
 

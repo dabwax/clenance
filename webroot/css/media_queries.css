@@ -84,7 +84,7 @@ footer a {
     margin-top: 42px !important;
 }
 .bola-icone p {
-    font-size: 20px !important;
+    font-size: 18px !important;
 }
 .coracoes-5 {
     right: 60px !important;
@@ -155,15 +155,22 @@ body {
  * tablet e desktop pequeno.
  */
 @media (min-width: 990px) and (max-width: 1200px) {
-
+.col-bem-vindo p {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
 .bola-icone {
-    height: 270px !important;
+    height: 166px !important;
 }
 .bola-icone img {
-    margin-top: 42px !important;
+    margin-top: 0px !important;
+    height: 30px !important;
 }
 .bola-icone p {
-    font-size: 20px !important;
+    font-size: 13px !important;
+}
+.bola-icone-2 p {
+    font-size: 11px !important;
 }
 .coracoes-5 {
     right: 60px !important;

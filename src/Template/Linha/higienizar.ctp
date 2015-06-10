@@ -20,11 +20,13 @@
                     <?php echo $this->Html->image("bonequinha.png"); ?>
                     <strong>Dica do Dermatologista</strong>
                 </h2>
-                <div class="box-branco">
+                <div class="box-branco text-justify">
                     <p>O objetivo de higienizar diariamente a pele é remover da superfície cutânea impurezas como sebo, suor, descamação e bactérias, além dos resíduos ambientais e cosméticos.</p>
 
                     <p>A higiene deve ser realizada pelo menos duas vezes ao dia, de manhã e a noite. Nas peles oleosas e acneicas o uso de produtos desincrustante duas vezes por semana traz benefícios desde que utilizadas com gentileza!</p>
                 </div>
+
+                <span style="display: block; text-align: right; margin-top: 80px;"><?php echo $this->Html->image("selo-brasileiro.png", ['style' => 'height: 42px;']); ?></span>
             </div>
         </div>
 
@@ -38,10 +40,10 @@
                 <div class="conteudo-tooltip animated fadeInDown hide">
                     <a href="#" class="btn"><i class="fa fa-times"></i></a>
                     <div class="nome-produto">
-                        <h1 class="titulo-marca animated fadeInUp">Cleanance</h1>
+                        <h1 class="titulo-marca animated fadeInUp" style="font-size: 34px;">Cleanance</h1>
                         <h3 class="subtitulo-marca animated fadeInUp">Sabonete dermatológico desincrustante</h3>
                     </div> <!-- .nome-produto -->
-                    <?php echo $this->Html->image("selo-cleanance.png", ['class' => 'pull-right']); ?>
+                    <?php echo $this->Html->image("com-enxague.png", ['class' => 'pull-right']); ?>
 
                     <div class="clearfix"></div>
 
@@ -69,11 +71,11 @@
 
                 <div class="conteudo-tooltip animated fadeInDown hide">
                     <a href="#" class="btn"><i class="fa fa-times"></i></a>
-                    <div class="nome-produto">
-                        <h1 class="titulo-marca animated fadeInUp">Cleanance</h1>
-                        <h3 class="subtitulo-marca animated fadeInUp">Água purificante demaquitante</h3>
+                    <div class="nome-produto" style="width: 43%;">
+                        <h1 class="titulo-marca animated fadeInUp" style="font-size: 34px;">Cleanance</h1>
+                        <h3 class="subtitulo-marca animated fadeInUp">Água purificante <br> demaquitante</h3>
                     </div> <!-- .nome-produto -->
-                    <?php echo $this->Html->image("selo-cleanance.png", ['class' => 'pull-right']); ?>
+                    <?php echo $this->Html->image("sem-enxague.png", ['class' => 'pull-right']); ?>
 
                     <div class="clearfix"></div>
 
@@ -101,10 +103,12 @@
 
                 <div class="conteudo-tooltip animated fadeInDown hide">
                     <a href="#" class="btn"><i class="fa fa-times"></i></a>
+
                     <div class="nome-produto">
-                        <h1 class="titulo-marca animated fadeInUp">Cleanance</h1>
+                        <h1 class="titulo-marca animated fadeInUp" style="font-size: 34px;">Cleanance</h1>
                         <h3 class="subtitulo-marca animated fadeInUp">Gel de limpeza</h3>
                     </div> <!-- .nome-produto -->
+                    <?php echo $this->Html->image("com-enxague.png", ['class' => 'pull-right']); ?>
 
                     <div class="clearfix"></div>
 
@@ -126,6 +130,9 @@
             </div> <!-- .tooltip-produto -->
 
             <?php echo $this->Html->image("produtos_linha_cleanance.png", ['class' => 'img-responsive img-linha-cleanance']); ?>
+
+            <span class="legenda-1">Pele Oleosa e acneica</span>
+            <span class="legenda-2">Pele Oleosa</span>
 
         </div>
 

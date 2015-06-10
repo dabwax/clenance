@@ -198,3 +198,6 @@ padding: 0px;
     position: relative;
     z-index: 1;
 }
+.jwc_zoom_in, .jwc_zoom_out {
+    display: none;
+}

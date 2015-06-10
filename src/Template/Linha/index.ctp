@@ -19,8 +19,8 @@
             <p class="sub-chamada">Clique em cada etapa e saiba mais sobre os <br> produtos da linha Cleanance.</p>
         </div>
 
-        <div class="col-lg-4 col-md-6 col-sm-6 hidden-xs pull-right">
-            <div class="mt30">
+        <div class="col-lg-4 col-md-6 col-sm-6 hidden-xs">
+            <div class="mt30" style="position: relative; left: -20px;">
                 <h1 class="titulo-marca animated fadeInUp">Cleanance</h1>
                 <h2 class="subtitulo-marca animated fadeInUp">Higieniza, purifica e combate</h2>
                 <h3 class="subtitulo-marca animated fadeInUp">a oleosidade na origem</h3>
@@ -31,7 +31,7 @@
     <div class="row">
 
         <div class="col-lg-12 text-center">
-            <?php echo $this->Html->image("imagens_produtos_1_pagina.png", ["class" => "img-responsive-on-mobile"]); ?>
+            <?php echo $this->Html->image("produtos.png", ["class" => "img-responsive-on-mobile img-responsive"]); ?>
         </div>
     </div>
 </div> <!-- .container -->

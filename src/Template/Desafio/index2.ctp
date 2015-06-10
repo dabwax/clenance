@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-lg-4">
 
-                        <?php echo $this->Html->image("eu-amo-clenance.jpg", ["class" => "img-responsive", "style" => "margin: 0 auto;"]) ?>
+                        <?php echo $this->Html->image("cleanance.png", ["class" => "img-responsive", "style" => "margin: 0 auto;"]) ?>
 
                         <p>Preencha o formulário abaixo</p>
 
@@ -26,7 +26,7 @@
                             </div>
                             <div class="form-group campo-newsletter">
                                 <label class="checkbox" style="font-size: 12px;">
-                                    <?php echo $this->Form->input("newsletter", ['type' => 'checkbox', 'label' => false]  ); ?> Aceito receber informações de Eau Thermale Avène.
+                                    <?php echo $this->Form->input("newsletter", ['type' => 'checkbox', 'label' => false, 'checked' => true]  ); ?> Aceito receber informações de Eau Thermale Avène.
                                 </label>
                             </div>
                     </div>
