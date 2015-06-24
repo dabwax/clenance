@@ -5,7 +5,7 @@ $(document).ready(function() {
         var mensagem = 'Coloque uma foto bem bonita!';
 
         $(".campo-anexo").notify(mensagem, {
-            position: "right",
+            position: "bottom",
             className: "success",
             showAnimation: "fadeIn",
             showDuration: 400,
@@ -21,7 +21,7 @@ $(document).ready(function() {
         var mensagem = 'Receba novidades da Avène por e-mail!';
 
         $(".campo-newsletter").notify(mensagem, {
-            position: "bottom center",
+            position: "bottom left",
             className: "info",
             showAnimation: "fadeIn",
             showDuration: 400,
@@ -33,8 +33,8 @@ $(document).ready(function() {
 
         var mensagem = 'Não se esqueça de aceitar os termos de uso!';
 
-        $(".campo-termos-de-uso").notify(mensagem, {
-            position: "bottom center",
+        $.notify(mensagem, {
+            position: "top left",
             className: "success",
             showAnimation: "fadeIn",
             showDuration: 400,
@@ -56,5 +56,16 @@ $(document).ready(function() {
 
         $(".campo-efeito").val(efeito);
         $(".crop_me").attr("src", img_selecionada);
+
+        $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+
+        return false;
     });
+});
+
+$(window).load(function() {
+
+        $(".width-imagem").val($(".crop_me").width());
+        $(".height-imagem").val($(".crop_me").height());
+
 });

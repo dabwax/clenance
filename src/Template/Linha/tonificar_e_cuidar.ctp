@@ -9,7 +9,7 @@
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <div class="bolinhas">
                 <a href="<?php echo $this->Url->build(['action' => 'higienizar']); ?>" class="animated fadeInDown"><span>1</span> <p>Higienizar</p></a>
-                <a href="<?php echo $this->Url->build(['action' => 'tonificar_e_cuidar']); ?>" class="animated fadeInDown ativo"><span>2</span> <p>Tonificar <br> e Cuidar</p></a>
+                <a href="<?php echo $this->Url->build(['action' => 'tonificar_e_cuidar']); ?>" class="tonificar_e_cuidar animated fadeInDown ativo"><span>2</span> <p>Tonificar <br> e Cuidar</p></a>
                 <a href="<?php echo $this->Url->build(['action' => 'proteger']); ?>" class="animated fadeInDown"><span>3</span> <p>Proteger</p></a>
             </div> <!-- .bolinhas -->
 
@@ -21,10 +21,11 @@
                     <strong>Dica do Dermatologista</strong>
                 </h2>
                 <div class="box-branco text-justify">
-                    <p>O objetivo de higienizar diariamente a pele é remover da superfície cutânea impurezas como sebo, suor, descamação e bactérias, além dos resíduos ambientais e cosméticos.</p>
 
-                    <p>A higiene deve ser realizada pelo menos duas vezes ao dia, de manhã e a noite. Nas peles oleosas e acneicas o uso de produtos desincrustante duas vezes por semana traz benefícios desde que utilizadas com gentileza!</p>
-                </div>
+                    <p>A tonificação e o cuidado da pele após higiene diária é considerada uma etapa importante na rotina de cuidados diários.</p>
+<p>A principal função do tônico é finalizar a higiene facial contribuindo com sua ação adstringente, muitas vezes seborreguladora dada a sua composição especialmente formulada para manter as peles oleosas e acneicas sob controle, com aparência refrescante e saudável o dia todo.</p>
+<p>O cuidado da pele após higiene diário em como principal função de uniformizar a pele, fechar os poros, controlar a oleosidade ao longo do dia e fixar a maquiagem por mais tempo.</p>
+              </div>
             </div>
         </div>
 
@@ -39,7 +40,7 @@
                     <a href="#" class="btn"><i class="fa fa-times"></i></a>
                     <div class="nome-produto">
                         <h1 class="titulo-marca animated fadeInUp" style="font-size: 34px;">Cleanance</h1>
-                        <h3 class="subtitulo-marca animated fadeInUp">Loção matificante</h3>
+                        <h3 class="subtitulo-marca animated fadeInUp" style="margin-bottom: 20px;">Loção matificante</h3>
                     </div> <!-- .nome-produto -->
 
                     <div class="clearfix"></div>
@@ -71,7 +72,7 @@
                     <a href="#" class="btn"><i class="fa fa-times"></i></a>
                     <div class="nome-produto">
                         <h1 class="titulo-marca animated fadeInUp" style="font-size: 34px;">Cleanance</h1>
-                        <h3 class="subtitulo-marca animated fadeInUp">Emulsão seborreguladora matificante</h3>
+                        <h3 class="subtitulo-marca animated fadeInUp" style="margin-bottom: 20px;">Emulsão seborreguladora matificante</h3>
                     </div> <!-- .nome-produto -->
 
                     <div class="clearfix"></div>
@@ -91,7 +92,9 @@
                 </div> <!-- .conteudo-tooltip -->
             </div> <!-- .tooltip-produto -->
 
-            <?php echo $this->Html->image("produtos_2.png", ['class' => 'img-responsive img-linha-cleanance pull-right']); ?>
+            <?php echo $this->Html->image("produtos_2.png", ['class' => 'img-responsive img-linha-cleanance img-produtos-2 pull-right', 'style' => 'margin-top: 62px;']); ?>
+
+            <div class="clearfix"></div>
 
         </div>
 

@@ -43,8 +43,9 @@
 
                                     <?php echo $this->Form->create("Participant"); ?>
                                     <?php echo $this->Form->input("id", ['value' => $p->id, 'type' => 'hidden']); ?>
-                                    <button type="submit" class="btn btn-block btn-lg btn-primary" style="margin-top: 20px;">clique aqui para curtir</a>
+                                    <button type="submit" class="btn btn-block btn-lg btn-primary" style="margin-top: 20px;">clique aqui para curtir</button>
                                     <?php echo $this->Form->end(); ?>
+                                    <a class="btn btn-block btn-lg btn-danger" onclick="window.parent.$.fancybox.close();" style="margin-top: 20px;">fechar esta janela</a>
                                 </div>
                             </div>
                         </div>

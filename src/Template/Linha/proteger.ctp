@@ -9,7 +9,7 @@
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <div class="bolinhas">
                 <a href="<?php echo $this->Url->build(['action' => 'higienizar']); ?>" class="animated fadeInDown"><span>1</span> <p>Higienizar</p></a>
-                <a href="<?php echo $this->Url->build(['action' => 'tonificar_e_cuidar']); ?>" class="animated fadeInDown"><span>2</span> <p>Tonificar <br> e Cuidar</p></a>
+                <a href="<?php echo $this->Url->build(['action' => 'tonificar_e_cuidar']); ?>" class="tonificar_e_cuidar animated fadeInDown"><span>2</span> <p>Tonificar <br> e Cuidar</p></a>
                 <a href="<?php echo $this->Url->build(['action' => 'proteger']); ?>" class="animated fadeInDown ativo"><span>3</span> <p>Proteger</p></a>
             </div> <!-- .bolinhas -->
 
@@ -42,8 +42,8 @@
                 <div class="conteudo-tooltip animated fadeInDown hide">
                     <a href="#" class="btn"><i class="fa fa-times"></i></a>
                     <div class="nome-produto laranja">
-                        <h1 class="titulo-marca animated fadeInUp" style="font-size: 24px; font-weight: bold;">Avène Solar Toque Seco</h1>
-                        <h3 class="subtitulo-marca animated fadeInUp" style="font-size: 22px; margin-bottom: 10px;">FPS 30 e FPS 50+</h3>
+                        <h1 class="titulo-marca animated fadeInUp" style="font-size: 24px; font-weight: bold;">Avène Solar <br> Toque Seco</h1>
+                        <h3 class="subtitulo-marca animated fadeInUp" style="font-size: 22px; margin-bottom: 20px;">FPS 30 e FPS 50+</h3>
                     </div> <!-- .nome-produto -->
 
                     <div class="clearfix"></div>
@@ -73,8 +73,8 @@
                 <div class="conteudo-tooltip animated fadeInDown hide">
                     <a href="#" class="btn"><i class="fa fa-times"></i></a>
                     <div class="nome-produto laranja">
-                        <h1 class="titulo-marca animated fadeInUp" style="font-size: 24px; font-weight: bold;">Avène Solar Toque Seco</h1>
-                        <h3 class="subtitulo-marca animated fadeInUp" style="font-size: 22px; margin-bottom: 10px;">FPS 30 e FPS 50+</h3>
+                        <h1 class="titulo-marca animated fadeInUp" style="font-size: 24px; font-weight: bold;">Avène Solar <br> Toque Seco</h1>
+                        <h3 class="subtitulo-marca animated fadeInUp" style="font-size: 22px; margin-bottom: 20px;">FPS 30 e FPS 50+</h3>
                     </div> <!-- .nome-produto -->
 
                     <div class="clearfix"></div>
@@ -107,7 +107,7 @@
                     <a href="#" class="btn"><i class="fa fa-times"></i></a>
                     <div class="nome-produto">
                         <h1 class="titulo-marca animated fadeInUp" style="font-size: 34px;">Cleanance</h1>
-                        <h3 class="subtitulo-marca animated fadeInUp">Solar</h3>
+                        <h3 class="subtitulo-marca animated fadeInUp" style="margin-bottom: 20px;">Solar</h3>
                     </div> <!-- .nome-produto -->
 
                     <div class="clearfix"></div>
@@ -128,7 +128,11 @@
                 </div> <!-- .conteudo-tooltip -->
             </div> <!-- .tooltip-produto -->
 
-            <?php echo $this->Html->image("toque-seco.png", ['class' => 'img-responsive img-linha-cleanance pull-right']); ?>
+            <?php echo $this->Html->image("produtos-solaire.png", ['class' => 'img-responsive img-linha-cleanance pull-right img-toque-seco']); ?>
+
+            <div class="grupo-legendas">
+                <span class="legenda-1" style="color: #EA6F0C;">Uniformizante</span>
+            </div>
 
         </div>
 

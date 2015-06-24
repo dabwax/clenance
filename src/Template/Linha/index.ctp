@@ -9,7 +9,7 @@
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="bolinhas">
                 <a href="<?php echo $this->Url->build(['action' => 'higienizar']); ?>" class="animated fadeInDown"><span>1</span> <p>Higienizar</p></a>
-                <a href="<?php echo $this->Url->build(['action' => 'tonificar_e_cuidar']); ?>" class="animated fadeInDown"><span>2</span> <p>Tonificar <br> e Cuidar</p></a>
+                <a href="<?php echo $this->Url->build(['action' => 'tonificar_e_cuidar']); ?>" class="tonificar_e_cuidar animated fadeInDown"><span>2</span> <p>Tonificar <br> e Cuidar</p></a>
                 <a href="<?php echo $this->Url->build(['action' => 'proteger']); ?>" class="animated fadeInDown"><span>3</span> <p>Proteger</p></a>
             </div> <!-- .bolinhas -->
 
@@ -31,7 +31,7 @@
     <div class="row">
 
         <div class="col-lg-12 text-center">
-            <?php echo $this->Html->image("produtos.png", ["class" => "img-responsive-on-mobile img-responsive"]); ?>
+            <?php echo $this->Html->image("produtos.png", ["class" => "img-responsive-on-mobile img-responsive img-desafio-home"]); ?>
         </div>
     </div>
 </div> <!-- .container -->

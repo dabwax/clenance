@@ -45,14 +45,20 @@
 
     <meta property="og:type" content="website">
 
-    <title><?= $this->fetch('title') ?> - Clenance</title>
+    <title>Higieniza, purifica e combate a oleosidade na origem - <?= $this->fetch('title') ?> Cleanance</title>
 
-    <?= $this->Html->meta('icon') ?>
+    <?= $this->Html->meta(
+    'favicon2.ico',
+    '/favicon2.ico',
+    ['type' => 'icon']
+);
+?>
 
     <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css') ?>
     <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css') ?>
     <?= $this->Html->css('http://fonts.googleapis.com/css?family=Roboto:400,700,300') ?>
     <?= $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css') ?>
+    <?= $this->Html->css('/vendor/alertify/css/alertify.min.css') ?>
     <?= $this->Html->css('app.min.css') ?>
 
     <?= $this->fetch('meta') ?>
@@ -69,10 +75,28 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
+    <?= $this->Html->script('/vendor/lazyload/jquery.lazyload.min.js') ?>
+    <?= $this->Html->script('/vendor/jwplayer/jwplayer.js') ?>
+    <?= $this->Html->script('/vendor/alertify/alertify.min.js') ?>
+    <script type="text/javascript">jwplayer.key="oWvUcB1DPQkDByLaU6hwEWdQFj+zUTXiy6kdLjBmtz0gxFFKGzNqm7Pp3shX2CHP";</script>
+
     <?= $this->Html->script('app.min.js') ?>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40688581-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 
 <body data-is-mobile="<?php echo $is_mobile; ?>" class="<?php echo strtolower($this->request->params['controller']); ?> <?php echo strtolower($this->request->params['controller']); ?>-<?php echo strtolower($this->request->params['action']); ?>">
+
+<?= $this->fetch('sidebar') ?>
 
 <div class="page-wrap">
 
@@ -87,7 +111,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand animated fadeIn" href="<?php echo $this->Url->build(['controller' => 'home', 'action' => 'index']); ?>">
-          <?php echo $this->Html->image("logo_avene.png", ['class' => 'img-responsive']); ?>
+          <?php echo $this->Html->image("logo_avene2.png", ['class' => 'img-responsive']); ?>
       </a>
     </div>
 
@@ -104,7 +128,7 @@
             <a href="<?php echo $this->Url->build(['controller' => 'Wall', 'action' => 'index']); ?>">Cleanance Wall</a>
         </li>
         <li <?= ($this->request->params['controller'] == 'Linha') ? 'class="active"' : ''; ?>>
-            <a href="<?php echo $this->Url->build(['controller' => 'Linha', 'action' => 'index']); ?>">Linha Completa</a>
+            <a href="<?php echo $this->Url->build(['controller' => 'Linha', 'action' => 'higienizar']); ?>">Linha Completa</a>
         </li>
         <li <?= ($this->request->params['controller'] == 'Regulamento') ? 'class="active"' : ''; ?>>
             <a href="<?php echo $this->Url->build(['controller' => 'Regulamento', 'action' => 'index']); ?>">Regulamento</a>

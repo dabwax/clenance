@@ -201,3 +201,11 @@ padding: 0px;
 .jwc_zoom_in, .jwc_zoom_out {
     display: none;
 }
+.btn-sticker {
+    display: inline-block;
+    width: 100%;
+}
+.btn-sticker img {
+    width: 40% !important;
+    height: auto !important;
+}

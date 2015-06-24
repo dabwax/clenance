@@ -99,8 +99,31 @@ class DesafioController extends AppController
                 $w = $this->request->data['cropW'];
                 $h = $this->request->data['cropH'];
 
+
+                // Carrega o Mobile Detect
+                require_once WWW_ROOT . 'vendor' . DS . 'Mobile-Detect' . DS . 'Mobile_Detect.php';
+
+                $detect = new \Mobile_Detect;
+
+                if( $detect->isMobile() || $detect->isTablet() ){
+                    $is_mobile = "true";
+                } else {
+                    $is_mobile = "false";
+                }
+
+                if($is_mobile == "true") {
+                    $w = $this->request->data['width-imagem'];
+                    $h = $this->request->data['height-imagem'];
+
+                    // Efetua o resize na imagem
+                    $participantEntity->resize_user_image($efeito, $w, $h);
+                } else {
+
                 // Efetua o crop na imagem
                 $participantEntity->crop_user_image($efeito, $x, $y, $w, $h);
+
+                }
+
 
                 // Envia o usuário para a etapa 2
                 return $this->redirect( ['action' => 'etapa_2'] );

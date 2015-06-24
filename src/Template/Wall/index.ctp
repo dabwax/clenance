@@ -11,7 +11,7 @@
                 <div class="row">
 
                 <div class="col-lg-2 col-md-2 text-center">
-                    <img src="img/eu-amo-clenance.jpg" style="margin: 0 auto; margin-top: 32px;" alt="" class="img-responsive">
+                    <img src="<?php echo $this->Url->build('/img/cleanance.png'); ?>" style="margin: 0 auto; margin-top: 32px;" alt="" class="img-responsive">
                 </div> <!-- .col-lg-3 -->
 
                 <div class="col-lg-7 col-md-6">
@@ -36,9 +36,9 @@
                     <div class="col-md-3">
                         <div class="registro-cleanance-wall" style="height: 340px;">
                             <a href="<?php echo $this->Url->build(['action' => 'visualizar', $p->id]); ?>" class="btn-fancybox">
-                            <div class="container-imagem" style="overflow: hidden;">
+                            <div class="" style="overflow: hidden;">
                             <?php $timthumb = $this->Url->build('/vendor/timthumb.php'); ?>
-                                <?php echo $this->Html->image($timthumb . "?w=240&src=" . $this->Url->build('/webroot/uploads/participants/' . $p->attachment_cropped, true)); ?>
+                                <?php echo $this->Html->image("sas", ['height' => '240', 'class' => 'lazy', 'data-original' => $timthumb . "?w=240&src=" . $this->Url->build('/webroot/uploads/participants/' . $p->attachment_cropped, true) ]); ?>
                             </div>
                             <div class="pull-left" style="width: 80%;">
                                 <p style="word-wrap: break-word;"><?php echo $p->name; ?></p>

@@ -21,7 +21,7 @@
 
                         <div class="clearfix"></div>
 
-                        <ul class="posicoes col-lg-3">
+                        <ul class="posicoes col-lg-3" style="margin-top: 30px;">
                             <li>1</li>
                             <li class="atual">2</li>
                             <li class="">3</li>
@@ -50,6 +50,8 @@
                     </div> <!-- lateral -->
 
                     <div class="principal col-lg-7 col-xs-12 col-sm-12 text-center">
+
+                    <h2 class="chamada visible-sm visible-xs visible-md text-center" style="top: -26px; font-size: 33px !important;">Resultado Final</h2>
 
                         <div class="container-imagem-etapa2">
                             <?php

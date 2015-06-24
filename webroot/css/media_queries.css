@@ -1,7 +1,166 @@
+
+@media (max-height: 780px) {
+    .img-desafio-home {
+        height: 460px !important;
+        margin: 0 auto;
+    }
+
+}
 /*
  * celular
  */
 @media (max-width: 700px) {
+        .img-bolas-home {
+    width: 80% !important;
+  margin: 0 auto !important;
+  margin-bottom: 20px !important;
+}
+        .img-produtos-2 {
+    height: 290px;
+    float: left !important;
+    margin-left: 200px !important;
+    margin-top: 0px !important;
+}
+    .crop_me {
+        width: 100%;
+    }
+    .tooltip-higienizar-8 {
+        left: 12px !important;
+        top: 0px !important;
+    }
+    .tooltip-higienizar-7 {
+        left: 12px !important;
+        top: 0px !important;
+    }
+    .tooltip-higienizar-7 .btn-tooltip {
+        position: relative;
+        left: 154px;
+    }
+    .tooltip-higienizar-6 {
+        left: 12px !important;
+        top: 0px !important;
+    }
+    .tooltip-higienizar-7 .conteudo-tooltip {
+        top: -318px !important;
+    }
+    .tooltip-higienizar-6 .btn-tooltip {
+        left: 42px !important;
+        position: relative !important;
+    }
+    .tracejado {
+        display: none !important;
+    }
+    .tooltip-higienizar-8 {
+        left: 60px;
+        position: relative;
+    }
+    .tooltip-higienizar-8 .btn-tooltip {
+        position: relative;
+        left: 244px;
+    }
+    .tooltip-higienizar-8 .conteudo-tooltip {
+        top: -202px !important;
+    }
+    .img-toque-seco {
+        margin-top: 0px !important;
+        margin-bottom: 24px !important;
+    }
+    .tooltip-produto {
+        width: 100% !important;
+    }
+    .conteudo-tooltip {
+        width: 90% !important;
+        left: 0px !important;
+    }
+    .tooltip-higienizar-2 .conteudo-tooltip {
+        width: 94%;
+    }
+    .img-higienizar {
+        margin-top: 120px !important;
+    }
+    .grupo-legendas {
+        margin-top: 0px !important;
+        float: left;
+        display: inline;
+        margin-bottom: 108px;
+        width: 100%;
+    }
+    .grupo-legendas span {
+        position: relative;
+        bottom: 0px;
+        left: 0px;
+    }
+    .tooltip-higienizar-1 {
+        left: 0px !important;
+        top: 75px !important;
+    }
+    .tooltip-higienizar-1 .conteudo-tooltip {
+        top: -251px !important;
+        left: 16px !important;
+    }
+    .tooltip-higienizar-1 .btn-tooltip {
+        position: relative;
+        left: 114px;
+        top: 132px;
+        z-index: 9999;
+    }
+    .tooltip-higienizar-1 .tracejado {
+        left: 142px !important;
+        top: -8px !important;
+    }
+    .grupo-legendas .legenda-1 {
+        margin-left: 0px !important;
+        font-size: 10px;
+    }
+    .grupo-legendas .legenda-2 {
+        margin-left: 0px !important;
+        font-size: 10px;
+        float: right;
+    }
+    .tooltip-higienizar-2 {
+        left: 0px !important;
+        top: 73px !important;
+    }
+    .tooltip-higienizar-2 .btn-tooltip {
+        position: relative !important;
+        left: 236px !important;
+        top: 18px;
+    }
+    .tooltip-higienizar-3 {
+        left: 0px !important;
+        top: 103px !important;
+    }
+    .tooltip-higienizar-3 .btn-tooltip {
+        position: relative;
+        left: 308px;
+        top: 38px;
+    }
+    .tooltip-higienizar-3 .conteudo-tooltip {
+        left: 14px !important;
+    }
+    .tooltip-higienizar-4 {
+        left: -2px !important;
+        top: -14px !important;
+    }
+    .tooltip-higienizar-4 .btn-tooltip {
+        position: relative;
+        left: 240px;
+    }
+    .tooltip-higienizar-5 {
+        left: -2px !important;
+        top: 0px !important;
+    }
+    .tooltip-higienizar-5 .btn-tooltip {
+        position: relative;
+        left: 328px !important;
+        top: 34px !important;
+    }
+    .tooltip-higienizar-5 .tracejado {
+        display: none !important;
+    }
+.col-bem-vindo {
+    min-height: 750px !important;
+}
     .clearfix-on-mobile {
         clear: both;
     }
@@ -10,6 +169,10 @@
     }
     .container-imagem-etapa2 {
         width: 100% !important;
+    }
+
+    .bola-icone p {
+        font-size: 15px !important;
     }
 }
 @media (max-width: 480px) {
@@ -66,6 +229,11 @@ footer a {
  tablet e celular
  */
 @media (max-width: 991px) {
+        .container-sticker img
+    {
+        width:  80px !important;
+        height: auto !important;
+    }
 .img-responsive-on-mobile {
     display: block;
       max-width: 100%;
@@ -78,19 +246,26 @@ footer a {
         text-align: center;
 }
 .bola-icone {
-    height: 270px !important;
+    height: auto !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+    margin-top: 20px !important;
 }
 .bola-icone img {
-    margin-top: 42px !important;
+    margin-top: 0px !important;
+    height: 50px !important;
 }
 .bola-icone p {
-    font-size: 18px !important;
+    font-size: 12px !important;
+}
+.bola-icone-2 p {
+    font-size: 12px !important;
 }
 .coracoes-5 {
     right: 60px !important;
 }
 body {
-    background-position: -115px -116px !important;
+    background-position: -115px -433px !important;
 }
     .coracoes-3 {
     position: relative !important;
@@ -104,11 +279,11 @@ body {
 
 }
 
-    .navbar-clenance .active a {
-        background: #0099A8 !important;
-        color: #FFF !important;
-        padding-bottom: 0px;
-    }
+.navbar-clenance .active a {
+    background: #0099A8 !important;
+    color: #FFF !important;
+    padding-bottom: 0px;
+}
 .navbar-clenance {
     min-height: 53px;
     height: auto;
@@ -154,23 +329,52 @@ body {
 /**
  * tablet e desktop pequeno.
  */
+@media (max-width: 1200px) {
+.chamada {
+    font-size: 14px !important;
+}
+    .principal {
+        margin-top: 0px !important;
+    }
+    .regulamento2 {
+        margin-top: 0px !important;
+    }
+}
 @media (min-width: 990px) and (max-width: 1200px) {
+    .tooltip-higienizar-1 {
+          left: 264px !important;
+          top: 297px !important;
+    }
+    .tooltip-higienizar-2 {
+          left: 426px !important;
+          top: 168px !important;
+    }
+    .tooltip-higienizar-3 {
+      left: 571px !important;
+      top: 274px !important;
+    }
+    .tooltip-higienizar-7 {
+        left: 433px !important;
+    }
+    .tooltip-higienizar-6 {
+        left: 182px !important;
+    }
 .col-bem-vindo p {
     margin-top: 10px !important;
     margin-bottom: 10px !important;
 }
 .bola-icone {
-    height: 166px !important;
+    height: 130px !important;
 }
 .bola-icone img {
     margin-top: 0px !important;
     height: 30px !important;
 }
 .bola-icone p {
-    font-size: 13px !important;
+    font-size: 10px !important;
 }
 .bola-icone-2 p {
-    font-size: 11px !important;
+    font-size: 9px !important;
 }
 .coracoes-5 {
     right: 60px !important;

@@ -1,16 +1,9 @@
 $(document).ready(function() {
 
-    // Array Remove - By John Resig (MIT Licensed)
-    Array.prototype.remove = function(from, to) {
-      var rest = this.slice((to || from) + 1 || this.length);
-      this.length = from < 0 ? this.length + from : from;
-      return this.push.apply(this, rest);
-    };
-
     // Confirma que estamos na página de etapa 2
     if($("body").hasClass("desafio-etapa_2")) {
 
-        var stickersFila = [];
+        window.stickersFila = [];
 
         function adicionarFormulario(dados) {
             var total = parseInt($(".referencia-sticker-total").val());
@@ -118,7 +111,7 @@ $(document).ready(function() {
 
             $(this).parent().fadeOut(500);
 
-            var stickersFila = jQuery.grep(stickersFila, function(value) {
+            window.stickersFila = jQuery.grep(window.stickersFila, function(value) {
               return value.i != i;
             });
 
@@ -150,9 +143,14 @@ $(document).ready(function() {
             };
 
             // Adiciona a fila
-            stickersFila.push(dados);
+            window.stickersFila.push(dados);
 
             callbackStickersAdicionado(dados);
+
+
+            $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+
+            return false;
         });
     } // FIM!
 

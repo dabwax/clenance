@@ -1,7 +1,6 @@
-<?php
-$class = 'message';
-if (!empty($params['class'])) {
-    $class .= ' ' . $params['class'];
-}
-?>
-<div class="<?= h($class) ?>"><?= h($message) ?></div>
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        alertify.message("<?= h($message) ?>");
+    });
+</script>

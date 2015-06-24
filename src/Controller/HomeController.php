@@ -25,9 +25,9 @@ class HomeController extends AppController
                 $this->set("og_locale", "pt_BR");
 
                 $this->set("og_url", Router::url(null, true));
-                $this->set("og_title", "Eu participei da promoção! Participe você também.");
-                $this->set("og_site_name", "Eu Amo Cleanance");
-                $this->set("og_description", "Lorem ipsum dolor sit met");
+                $this->set("og_title", "Eu já declarei meu amor por Cleanance! E você?");
+                $this->set("og_site_name", "Eu já declarei meu amor por Cleanance! E você?");
+                $this->set("og_description", "Participe do Desafio de fotos #euamocleanance e concorra a um dos 5 kits de produtos Cleanance!");
                 $this->set("og_image", Router::url("/uploads/participants/" . $participant->attachment_cropped, true));
                 $this->set("og_image_type", "image/jpeg");
                 $this->set("og_image_width", 500);

@@ -1,3 +1,6 @@
+html, body {
+    height: 100%; /* IMPORTANT!!! stretches viewport to 100% */
+}
 .navbar-clenance {
     border: none !important;
     background: #FFF !important;
@@ -10,14 +13,13 @@
 .col-bem-vindo {
     background: #F6F7F7;
     padding-top: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 30px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-bottom: 26px;
     box-shadow: 0 0 19px rgba(113, 113, 113, 0.5);
     position: relative;
     z-index: 1;
-    min-height: 90vh;
-    max-height: auto;
+    min-height: 570px;
 }
 .col-bem-vindo p {
     margin-top: 30px;
@@ -60,8 +62,13 @@
 .navbar-clenance a {
     text-transform: uppercase;
     font-family: 'CenturyGothic';
-    font-size: 20px;
-    padding-bottom: 23px !important;
+    font-size: 15px;
+    margin: 0px !important;
+    padding: 0px !important;
+    height: 52px;
+    line-height: 52px !important;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
 }
 .bola-icone-1 .p-icone {
     margin-top: 1px;

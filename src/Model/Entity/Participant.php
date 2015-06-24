@@ -116,6 +116,45 @@ class Participant extends Entity
     }
 
 /**
+ * Função utilizada para efetuar o crop na imagem do participante.
+ *
+ * @param  [string] $efeito [Qual efeito foi utilizado - efeito1, efeito2, etc]
+ * @param  [integer] $x      [Posição X do crop]
+ * @param  [integer] $y      [Posição Y do crop]
+ * @param  [integer] $w      [Largura do crop]
+ * @param  [integer] $h      [Altura do crop]
+ * @return [string]         [Nome da imagem croppada]
+ */
+    public function resize_user_image($efeito, $w, $h)
+    {
+
+            require_once WWW_ROOT . 'vendor/wideimage/WideImage.php';
+
+            $filename = $this->attachment;
+
+            if(!empty($efeito) && $efeito != "nenhum") {
+                $filename = $efeito . "_" . $filename;
+            }
+
+            $newfilename = 'crop_' . $filename;
+
+            $path = WWW_ROOT . 'uploads/participants/' . $filename;
+            $newpath = WWW_ROOT . 'uploads/participants/' . $newfilename;
+
+            \WideImage::load($path)->resize($w, $h)->saveToFile($newpath);
+
+            // Atualiza o campo de anexo
+            $participants = TableRegistry::get('Participants');
+
+            $this->attachment_effect = $efeito;
+            $this->attachment_cropped = $newfilename;
+
+            $participants->save($this);
+
+            return $newfilename;
+    }
+
+/**
  * Função utilizada para recuperar todos os stickers disponíveis.
  * Utilizado na etapa 2 do desafio.
  *
@@ -175,7 +214,23 @@ class Participant extends Entity
             $image = \WideImage::loadFromFile(WWW_ROOT . 'uploads' . DS . 'participants' . DS . $attachment_cropped);
 
             $attachment_sticker = str_replace('/clenance/', '/', $s['sticker_filename']);
-            $sticker = \WideImage::loadFromFile(WWW_ROOT . $attachment_sticker)->resize($s['sticker_width'] - 10, $s['sticker_height'] - 10, 'fill');
+
+            // Carrega o Mobile Detect
+            require_once WWW_ROOT . 'vendor' . DS . 'Mobile-Detect' . DS . 'Mobile_Detect.php';
+
+            $detect = new \Mobile_Detect;
+
+            if( $detect->isMobile() || $detect->isTablet() ){
+                $is_mobile = true;
+            } else {
+                $is_mobile = false;
+            }
+
+            if(!$is_mobile) {
+                $sticker = \WideImage::loadFromFile(WWW_ROOT . $attachment_sticker)->resize($s['sticker_width'] - 10, $s['sticker_height'] - 10, 'fill');
+            } else {
+                $sticker = \WideImage::loadFromFile(WWW_ROOT . $attachment_sticker)->resize(80);
+            }
 
             if(!empty($s['sticker_rotatez'])) {
                 $sticker = $sticker->rotate(floatval(rad2deg($s['sticker_rotatez'])));

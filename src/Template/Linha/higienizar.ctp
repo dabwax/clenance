@@ -9,7 +9,7 @@
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <div class="bolinhas">
                 <a href="<?php echo $this->Url->build(['action' => 'higienizar']); ?>" class="animated fadeInDown ativo"><span>1</span> <p>Higienizar</p></a>
-                <a href="<?php echo $this->Url->build(['action' => 'tonificar_e_cuidar']); ?>" class="animated fadeInDown"><span>2</span> <p>Tonificar <br> e Cuidar</p></a>
+                <a href="<?php echo $this->Url->build(['action' => 'tonificar_e_cuidar']); ?>" class="tonificar_e_cuidar animated fadeInDown"><span>2</span> <p>Tonificar <br> e Cuidar</p></a>
                 <a href="<?php echo $this->Url->build(['action' => 'proteger']); ?>" class="animated fadeInDown"><span>3</span> <p>Proteger</p></a>
             </div> <!-- .bolinhas -->
 
@@ -26,7 +26,6 @@
                     <p>A higiene deve ser realizada pelo menos duas vezes ao dia, de manhã e a noite. Nas peles oleosas e acneicas o uso de produtos desincrustante duas vezes por semana traz benefícios desde que utilizadas com gentileza!</p>
                 </div>
 
-                <span style="display: block; text-align: right; margin-top: 80px;"><?php echo $this->Html->image("selo-brasileiro.png", ['style' => 'height: 42px;']); ?></span>
             </div>
         </div>
 
@@ -41,7 +40,7 @@
                     <a href="#" class="btn"><i class="fa fa-times"></i></a>
                     <div class="nome-produto">
                         <h1 class="titulo-marca animated fadeInUp" style="font-size: 34px;">Cleanance</h1>
-                        <h3 class="subtitulo-marca animated fadeInUp">Sabonete dermatológico desincrustante</h3>
+                        <h3 class="subtitulo-marca animated fadeInUp" style="margin-bottom: 20px;">Sabonete dermatológico desincrustante</h3>
                     </div> <!-- .nome-produto -->
                     <?php echo $this->Html->image("com-enxague.png", ['class' => 'pull-right']); ?>
 
@@ -73,7 +72,7 @@
                     <a href="#" class="btn"><i class="fa fa-times"></i></a>
                     <div class="nome-produto" style="width: 43%;">
                         <h1 class="titulo-marca animated fadeInUp" style="font-size: 34px;">Cleanance</h1>
-                        <h3 class="subtitulo-marca animated fadeInUp">Água purificante <br> demaquitante</h3>
+                        <h3 class="subtitulo-marca animated fadeInUp" style="margin-bottom: 20px;">Água purificante <br> demaquitante</h3>
                     </div> <!-- .nome-produto -->
                     <?php echo $this->Html->image("sem-enxague.png", ['class' => 'pull-right']); ?>
 
@@ -106,7 +105,7 @@
 
                     <div class="nome-produto">
                         <h1 class="titulo-marca animated fadeInUp" style="font-size: 34px;">Cleanance</h1>
-                        <h3 class="subtitulo-marca animated fadeInUp">Gel de limpeza</h3>
+                        <h3 class="subtitulo-marca animated fadeInUp" style="margin-bottom: 20px;">Gel de limpeza</h3>
                     </div> <!-- .nome-produto -->
                     <?php echo $this->Html->image("com-enxague.png", ['class' => 'pull-right']); ?>
 
@@ -129,10 +128,13 @@
                 </div> <!-- .conteudo-tooltip -->
             </div> <!-- .tooltip-produto -->
 
-            <?php echo $this->Html->image("produtos_linha_cleanance.png", ['class' => 'img-responsive img-linha-cleanance']); ?>
+            <?php echo $this->Html->image("produtos_linha_cleanance.png", ['class' => 'img-responsive img-linha-cleanance img-higienizar hidden-xs hidden-sm']); ?>
+            <?php echo $this->Html->image("produtos_linha_cleanance-selo.png", ['class' => 'img-responsive img-linha-cleanance img-higienizar hidden-md hidden-lg']); ?>
 
-            <span class="legenda-1">Pele Oleosa e acneica</span>
-            <span class="legenda-2">Pele Oleosa</span>
+            <div class="grupo-legendas">
+                <span class="legenda-1">Pele Oleosa e acneica</span>
+                <span class="legenda-2">Pele Oleosa</span>
+            </div>
 
         </div>
 

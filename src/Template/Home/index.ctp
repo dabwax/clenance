@@ -29,7 +29,7 @@
                         </span>
 
                             <span class="coracoes-3">
-                                <a href="<?php echo $this->Url->build(['controller' =>'linha', 'action' => 'index']); ?>" style="width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; z-index: 999; text-decoration: none;">
+                                <a href="<?php echo $this->Url->build(['controller' =>'linha', 'action' => 'higienizar']); ?>" style="width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; z-index: 999; text-decoration: none;">
                                     <p>Conheça os <br> lançamentos de <br> <strong>Cleanance</strong></p>
                                 </a>
                             </span>
@@ -44,33 +44,32 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <img src="<?php echo $this->Url->build('/img/produtos_penultima_pag.png'); ?>" class="img-produtos-home animated fadeIn img-responsive" alt="">
+                        <img src="<?php echo $this->Url->build('/img/imagem-nova-home.png'); ?>" class="img-produtos-home animated fadeIn img-responsive" alt="">
                     </div>
                 </div>
 
             </div>
 
             <div class="col-xs-12 col-lg-5 col-md-5">
-                <div class="col-bem-vindo">
+
+            <div class="col-bem-vindo height-100">
                     <p class="animated fadeIn">Estamos comemorando a chegada de novos produtos da linha Cleanance com o grande desafio de fotos:</p>
 
-                    <img src="<?php echo $this->Url->build('/img/eu-amo-clenance.jpg'); ?>" alt="Eu Amo Cleanance" class="img-responsive img-eu-amo-clenance animated fadeIn">
+                    <img src="<?php echo $this->Url->build('/img/cleanance.png'); ?>" alt="Eu Amo Cleanance" class="img-responsive img-eu-amo-clenance animated fadeIn">
 
                     <p class="animated fadeIn">Compartilhe seus momentos incríveis com a gente. Para participar é fácil:</p>
 
                     <div class="row">
 
-                        <div class="col-xs-6 col-md-6 col-lg-6">
-                            <div class="bola-icone bola-icone-1 animated fadeIn">
-                                <img src="<?php echo $this->Url->build('/img/icone-home-1.jpg'); ?>" alt="">
-                                <p class="p-icone">Declare e compartilhe <br> seu amor pela linha Cleanance <br> com a gente!</p>
+                        <div class="col-xs-12 col-sm-6 text-center col-md-6 col-lg-6">
+                            <div class="animated fadeIn text-center">
+                                <img src="<?php echo $this->Url->build('/img/bola-home-1.jpg'); ?>" class="img-responsive img-bolas-home" style="margin: 0 auto;" alt="">
                             </div>
                         </div>
 
-                        <div class="col-xs-6 col-md-6 col-lg-6">
-                            <div class="bola-icone bola-icone-2 animated fadeIn">
-                                <img src="<?php echo $this->Url->build('/img/icone-home-2.jpg'); ?>" alt="">
-                                <p class="p-icone">Os 5 melhores <br> momentos especiais <br> ganharão um kit com <br> produtos Cleanance.</p>
+                        <div class="col-xs-12 col-sm-6 text-center col-md-6 col-lg-6">
+                            <div class="animated fadeIn text-center">
+                                <img src="<?php echo $this->Url->build('/img/bola-home-2.jpg'); ?>" class="img-responsive img-bolas-home" style="margin: 0 auto;" alt="">
                             </div>
                         </div>
 
@@ -78,12 +77,15 @@
 
                     <div class="row">
 
-                        <div class="col-xs-12 text-center">
-                            <a href="<?= $this->Url->build(['controller' => 'desafio', 'action' => 'index']); ?>" class="btn btn-primary btn-participe animated fadeIn">Participe</a>
+                        <div class="col-xs-12 text-center" style="padding-bottom: 30px;">
+                            <a href="<?= $this->Url->build(['controller' => 'desafio', 'action' => 'index']); ?>" class="btn btn-primary btn-participe animated fadeIn" style="margin-bottom: 10px;">Participe</a>
                         </div>
                     </div>
 
+                    <div class="clearfix"></div>
+
                 </div> <!-- .col-bem-vindo -->
+
             </div>
     </div>
 </div>
