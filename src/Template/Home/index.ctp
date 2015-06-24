@@ -78,7 +78,7 @@
                     <div class="row">
 
                         <div class="col-xs-12 text-center" style="padding-bottom: 30px;">
-                            <a href="<?= $this->Url->build(['controller' => 'desafio', 'action' => 'index']); ?>" class="btn btn-primary btn-participe animated fadeIn" style="margin-bottom: 10px;">Participe</a>
+                            <a href="<?= $this->Url->build(['controller' => 'desafio', 'action' => 'index']); ?>" class="btn btn-primary btn-participe animated fadeIn" style="margin-bottom: 40px;">Participe</a>
                         </div>
                     </div>
 

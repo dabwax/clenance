@@ -81,6 +81,11 @@
                                     <td>R$24,90</td>
                                 </tr>
                                 <tr>
+                                    <td>Cleanance Solar FPS 30</td>
+                                    <td>1</td>
+                                    <td>R$59,90</td>
+                                </tr>
+                                <tr>
                                     <td>Cleanance Água 400mL</td>
                                     <td>1</td>
                                     <td>R$77,50</td>

@@ -17,35 +17,37 @@
 }
         .img-produtos-2 {
     height: 290px;
-    float: left !important;
-    margin-left: 200px !important;
-    margin-top: 0px !important;
+    float: none !important;
+    margin: 0px auto !important;
+    display: block !important;
 }
     .crop_me {
         width: 100%;
     }
     .tooltip-higienizar-8 {
-        left: 12px !important;
+        left: 0px !important;
         top: 0px !important;
     }
     .tooltip-higienizar-7 {
-        left: 12px !important;
+        left: 0px !important;
         top: 0px !important;
     }
     .tooltip-higienizar-7 .btn-tooltip {
-        position: relative;
-        left: 154px;
+        position: absolute;
+        left: 50% !important;
+        margin-left: 30px;
     }
     .tooltip-higienizar-6 {
-        left: 12px !important;
+        left: 0px !important;
         top: 0px !important;
     }
     .tooltip-higienizar-7 .conteudo-tooltip {
         top: -318px !important;
     }
     .tooltip-higienizar-6 .btn-tooltip {
-        left: 42px !important;
-        position: relative !important;
+        left: 50% !important;
+        position: absolute !important;
+        margin-left: -153px;
     }
     .tracejado {
         display: none !important;
@@ -56,7 +58,8 @@
     }
     .tooltip-higienizar-8 .btn-tooltip {
         position: relative;
-        left: 244px;
+        left: 50% !important;
+        margin-left: 148px;
     }
     .tooltip-higienizar-8 .conteudo-tooltip {
         top: -202px !important;
@@ -70,7 +73,7 @@
     }
     .conteudo-tooltip {
         width: 90% !important;
-        left: 0px !important;
+        left: 22px !important;
     }
     .tooltip-higienizar-2 .conteudo-tooltip {
         width: 94%;
@@ -100,7 +103,8 @@
     }
     .tooltip-higienizar-1 .btn-tooltip {
         position: relative;
-        left: 114px;
+        left: 50%;
+        margin-left: -114px;
         top: 132px;
         z-index: 9999;
     }
@@ -123,8 +127,9 @@
     }
     .tooltip-higienizar-2 .btn-tooltip {
         position: relative !important;
-        left: 236px !important;
+        left: 50% !important;
         top: 18px;
+        margin-left: 10px;
     }
     .tooltip-higienizar-3 {
         left: 0px !important;
@@ -132,7 +137,8 @@
     }
     .tooltip-higienizar-3 .btn-tooltip {
         position: relative;
-        left: 308px;
+        left: 50%;
+        margin-left: 80px;
         top: 38px;
     }
     .tooltip-higienizar-3 .conteudo-tooltip {
@@ -144,7 +150,8 @@
     }
     .tooltip-higienizar-4 .btn-tooltip {
         position: relative;
-        left: 240px;
+        left: 50%;
+        margin-left: -60px;
     }
     .tooltip-higienizar-5 {
         left: -2px !important;
@@ -152,7 +159,8 @@
     }
     .tooltip-higienizar-5 .btn-tooltip {
         position: relative;
-        left: 328px !important;
+        left: 50% !important;
+        margin-left: 25px;
         top: 34px !important;
     }
     .tooltip-higienizar-5 .tracejado {

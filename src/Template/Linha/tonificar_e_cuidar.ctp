@@ -92,7 +92,7 @@
                 </div> <!-- .conteudo-tooltip -->
             </div> <!-- .tooltip-produto -->
 
-            <?php echo $this->Html->image("produtos_2.png", ['class' => 'img-responsive img-linha-cleanance img-produtos-2 pull-right', 'style' => 'margin-top: 62px;']); ?>
+            <?php echo $this->Html->image("produtos_2.png", ['class' => 'img-responsive img-linha-cleanance img-produtos-2 pull-right', 'style' => 'margin-top: 62px; margin-bottom: 70px !important;']); ?>
 
             <div class="clearfix"></div>
 
